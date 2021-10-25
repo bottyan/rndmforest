@@ -10,7 +10,7 @@
     </div>
     <Nuxt />
     <div class="footer">
-      <NuxtLink to="/terms_and_conditions">Terms and conditions</NuxtLink>
+      <NuxtLink to="/terms_of_service">Terms of Service</NuxtLink>
     </div>
   </div>
 </template>
