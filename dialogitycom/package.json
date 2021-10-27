@@ -11,12 +11,15 @@
   },
   "dependencies": {
     "core-js": "^3.15.1",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "scrollmagic-plugin-gsap": "^1.0.4"
   },
   "devDependencies": {
+    "nuxt-gsap-module": "^1.5.0",
     "push-dir": "^0.4.1",
     "sass": "^1.43.3",
     "sass-loader": "^10.1.1",
+    "scrollmagic": "^2.0.8",
     "webpack": "^4.46.0"
   }
 }
