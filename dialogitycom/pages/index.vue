@@ -23,37 +23,33 @@ export default {
     this.animateOnScroll()
   },
 
+  beforeDestroy() {
+    this.$gsap.killTweensOf(".container");
+    this.$gsap.killTweensOf(".section");
+  },
+
   methods: {
     animateOnScroll() {
       // source: https://greensock.com/forums/topic/25648-change-backgroundcolor-on-scroll/
-      const container = document.querySelector('.container');
-      const sections = this.$gsap.utils.toArray(".section");
 
-      const tl = this.$gsap.timeline({
-          scrollTrigger: {
-          trigger: ".container",
-          pin: true,
-          scrub: true,
-          end: () => `+=${container.offsetWidth}`            
-        }
-      });
-      tl
-        .to(sections, { duration: sections.length*2, yPercent: -100 * (sections.length - 1), ease: "none" })
-        .to(container, { duration: 2, backgroundColor: '#FF0000', ease: "none" }, 0)
-        .to(container, { duration: 2, backgroundColor: '#0000FF', ease: "none" }, 2)
-        .to(container, { duration: 2, backgroundColor: '#FFFFFF', ease: "none" }, 4);
+      // const container = document.querySelector('.container');
+      // const sections = this.$gsap.utils.toArray(".section");
 
-      // this.$gsap.to(window, { duration: 2, scrollTo: 1000 })
-      // this.$gsap.to('.container', {
-      //   x: 500,
-      //   ease: 'Power1.easeInOut',
-      //   scrollTrigger: {
-      //     trigger: '.content',
+      // const tl = this.$gsap.timeline({
+      //     scrollTrigger: {
+      //     trigger: ".container",
       //     pin: true,
-      //     end: 'bottom',
-      //     scrub: true
+      //     scrub: true,
+      //     end: () => `+=${container.offsetWidth}`            
       //   }
-      // })
+      // });
+
+      // tl
+      //   .to(sections, { duration: sections.length*2, yPercent: -100 * (sections.length - 1), ease: "none" })
+      //   .to(container, { duration: 2, backgroundColor: '#FF0000', ease: "none" }, 0)
+      //   .to(container, { duration: 2, backgroundColor: '#0000FF', ease: "none" }, 2)
+      //   .to(container, { duration: 2, backgroundColor: '#FFFFFF', ease: "none" }, 4);
+
     }
   }
 }
@@ -62,7 +58,7 @@ export default {
 <style scoped lang="scss">
   .container {
     width: 100%;
-    height: 100vh;
+    //height: 100vh;
     //display: flex;
     //flex-wrap: nowrap;
     //flex-direction: column;

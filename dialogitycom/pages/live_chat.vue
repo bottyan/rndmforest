@@ -1,16 +1,16 @@
 <template>
   <div class="container" id="scrollDist">
     <div id="trigger"></div>
-    <div class="section">
+    <div class="section section1">
       Live Chat
     </div>
-    <div class="section">
+    <div class="section section2">
       Live Chat 2
     </div>
-    <div class="section">
+    <div class="section section3">
       Live Chat 3
     </div>
-    <div class="section">
+    <div class="section section4">
       Live Chat 4
     </div>
   </div>
@@ -24,29 +24,22 @@ export default {
     this.animateOnScroll();
   },
 
+  beforeDestroy() {
+    this.$gsap.killTweensOf(".container");
+    this.$gsap.killTweensOf(".section");
+  },
+
   methods: {
     animateOnScroll() {
       const container = document.querySelector('.container');
       
-      const tl = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'#scrollDist', start:'top top', end:'bottom bottom', scrub:1}});
+      const tl = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section2', start:'top top', end:'bottom top', scrub:3}});
       tl
-        .to(container, { duration: 1, backgroundColor: '#FF0000', ease: "none" }, 1)
-        .to(container, { duration: 1, backgroundColor: '#0000FF', ease: "none" }, 2)
-        .to(container, { duration: 1, backgroundColor: '#FFFFFF', ease: "none" }, 3)
-        ;
+        .to(container, { duration: 1, backgroundColor: '#FF0000', ease: "none" })
+      //   .to(container, { duration: 1, backgroundColor: '#0000FF', ease: "none" }, 2)
+      //   .to(container, { duration: 1, backgroundColor: '#FFFFFF', ease: "none" }, 3)
+      //   ;
 
-      // var tween = new TimelineMax()
-      //         .add(TweenMax.to($word, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
-      //         .add(TweenMax.to($dot, 0.1, {strokeDashoffset: 0, ease:Linear.easeNone}))  // draw dot for 0.1
-      //         .add(TweenMax.to("path", 1, {stroke: "#33629c", ease:Linear.easeNone}), 0);			// change color during the whole thing
-      
-      const controller = new this.$scrollmagic.Controller();
-
-      // // build scene
-      var scene = this.$scrollmagic.Scene({triggerElement: "#trigger", duration: 200})
-              //.setTween(tl)
-              // .addIndicators() // add indicators (requires plugin)
-              //.addTo(controller);
     },
   },
 }
