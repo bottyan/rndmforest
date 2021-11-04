@@ -1,6 +1,55 @@
+@font-face {
+    font-family: "Neris";
+    src: local("Neris"),
+     url(~assets/fonts/Neris-Light.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "Neris-Bold";
+    src: local("Neris-Bold"),
+     url(~assets/fonts/Neris-SemiBold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "Gotham-Black";
+    src: local("Gotham-Black"),
+     url(~assets/fonts/Gotham-Black.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "Beyond-Infinity";
+    src: local("Beyond-Infinity"),
+     url(~assets/fonts/Beyond-Infinity.ttf) format("truetype");
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Neris', 'Roboto', sans-serif;
   margin: 0;
   border: 0;
   padding: 0;
 }
+
+.max-width {
+    max-width: calc(min(50rem,80%));
+    margin: auto;
+}
+.flex-space {
+    flex: 100 0.01 auto;
+}
+.font-XXL {
+    font-family: 'Gotham-Black', 'Roboto', sans-serif;
+    font-size: calc(min(3rem,min(100vh/15,100vw/22)));
+}
+.font-XL {
+    font-family: 'Neris-Bold', 'Roboto', sans-serif;
+    font-size: calc(min(5rem,min(100vh/18,100vw/25)));
+}
+.font-L {
+    font-family: 'Neris-Bold', 'Roboto', sans-serif;
+    font-size: calc(min(3rem,min(100vh/25,100vw/32)));
+}
+.font-hand-L {
+    font-family: 'Beyond-Infinity', 'Roboto', sans-serif;
+    font-size: calc(min(5rem,min(100vh/18,100vw/25)));
+}
+
