@@ -3,8 +3,8 @@
     <div class="bg"></div>
     <div id="trigger"></div>
     <div class="section section1">
-      <div class="header-parent">
-        <div class="header">
+      <div class="content-parent">
+        <div class="header max-width">
           <div class="above-title"></div>
           <div class="title font-XXL">
             <h1>
@@ -27,7 +27,17 @@
       </div>
     </div>
     <div class="section section2">
-      Live Chat 2
+      <div class="content-parent">
+        <div class="block max-width">
+          <div class="l-image">
+            <img src="~/assets/images/robot-hand.png"/>
+          </div>
+          <div class="r-text">
+            <div class="block-title">Live Chat</div>
+            <div class="block-content">Easy to use, free live chat for websites.</div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="section section3">
       Live Chat 3
@@ -140,14 +150,35 @@ export default {
       }
     }
   }
-  .header-parent {
+  .content-parent {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
+
+    .block {
+      display: flex;
+      flex-direction: row;
+      .block-title {
+        font-size:4em;
+        font-family: 'Gotham-Black', 'Roboto', sans-serif;
+        margin-bottom: 1rem;
+      }
+      .l-image {
+        position: relative;
+        width: 40%;        
+        img {
+          max-width: 100%;
+          max-height: 80vh;
+        }
+      }
+      .r-text {
+        width: 60%;
+        padding-left: 10%;
+      }
+    }
+
     .header {
-      max-width: calc(min(50rem,80%));
-      //margin: auto;
 
       .above-title {
 
