@@ -3,11 +3,13 @@
     <div id="menu-main" class="header">
       <div class="navbar">
         <div class="logo">
-          <img class="img" src="~/assets/images/logo_only_new_tr.png"/>
+          <NuxtLink to="/">
+            <img class="img" src="~/assets/images/logo_w_text_n.png"/>
+          </NuxtLink>
         </div>
         <div class="menu">
           <div class="link-holder">
-            <div class="nav-item"><NuxtLink to="/">Home</NuxtLink></div>
+            <!--div class="nav-item"><NuxtLink to="/">Home</NuxtLink></div-->
             <div class="nav-item"><NuxtLink to="/live_chat">Live Chat</NuxtLink></div>
             <div class="nav-item"><NuxtLink to="/chat_automation">Chatbots</NuxtLink></div>
             <div class="nav-item"><NuxtLink to="/ai_sales_assistant">AI Sales Assistant</NuxtLink></div>
@@ -70,8 +72,8 @@
       .logo {
         //flex: 1 1 auto;
         .img {
-          width: 2.5rem;
-          height: 2.5rem;
+          width: 8em;
+          height: auto;
         }
       }
       .menu {

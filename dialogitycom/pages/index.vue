@@ -36,13 +36,9 @@
             <div class="block-subtitle">Help quick and get more business</div>
             <div class="block-title">Live Chat</div>
             <div class="block-content">
-              <p>Online communication app that enables you and your website visitors to chat in real-time.</p>
-
-              <!--p>It's a great alternative to phone calls or emails. All you or your visitors need to do is 
-              to type  the message inside the chat box and send it. </p-->
-
-              <p>Nowadays, 79 percent of customers prefer live chat to any other communication medium.</p>
-              <div class="read-more"><div class="text">more</div><div class="pointer">👉</div></div>
+              <div class="p">Enables you and your website visitors to chat in real-time.</div>
+              <div class="p">Nowadays, <div class="s">79%</div> of customers prefer live chat to any other communication medium.</div>
+              <div class="read-more"><NuxtLink to="/live_chat"><div class="text">more</div><div class="pointer">👉</div></NuxtLink></div>
             </div>
           </div>
         </div>
@@ -55,16 +51,12 @@
             <img src="~/assets/images/robot-hand.png"/>
           </div>
           <div class="r-text">
-            <div class="block-subtitle">Help quick and get more business</div>
-            <div class="block-title">Live Chat</div>
+            <div class="block-subtitle">Answers in 7x24 by automation</div>
+            <div class="block-title">Chatbots</div>
             <div class="block-content">
-              <p>Online communication app that enables you and your website visitors to chat in real-time.</p>
-
-              <!--p>It's a great alternative to phone calls or emails. All you or your visitors need to do is 
-              to type  the message inside the chat box and send it. </p-->
-
-              <p>Nowadays, 79 percent of customers prefer live chat to any other communication medium.</p>
-              <div class="read-more"><div class="text">more</div><div class="pointer">👉</div></div>
+              <div class="p">Answer common questions immediately by automation and reduce manual workload.</div>
+              <div class="p"><div class="s">60%</div> of customers expect immediate response which is a daunting task without automation.</div>
+              <div class="read-more"><NuxtLink to="/chat_automation"><div class="text">more</div><div class="pointer">👉</div></NuxtLink></div>
             </div>
           </div>
         </div>
@@ -74,19 +66,15 @@
       <div class="content-parent">
         <div class="block max-width">
           <div class="l-image">
-            <img src="~/assets/images/robot-hand.png"/>
+            <img src="~/assets/images/robot-head-r.png"/>
           </div>
           <div class="r-text">
-            <div class="block-subtitle">Help quick and get more business</div>
-            <div class="block-title">Live Chat</div>
+            <div class="block-subtitle">Truely engaging conversation</div>
+            <div class="block-title">AI Sales Assisstant</div>
             <div class="block-content">
-              <p>Online communication app that enables you and your website visitors to chat in real-time.</p>
-
-              <!--p>It's a great alternative to phone calls or emails. All you or your visitors need to do is 
-              to type  the message inside the chat box and send it. </p-->
-
-              <p>Nowadays, 79 percent of customers prefer live chat to any other communication medium.</p>
-              <div class="read-more"><div class="text">more</div><div class="pointer">👉</div></div>
+              <div class="p">New way of building conversations by machine learning.</div>
+              <div class="p">Automatically finds the best way of explaining complex products based on your knowledge base.</div>
+              <div class="read-more"><NuxtLink to="/ai_sales_assistant"><div class="text">more</div><div class="pointer">👉</div></NuxtLink></div>
             </div>
           </div>
         </div>
@@ -195,6 +183,11 @@ export default {
         flex: 1 1 auto;
         margin-bottom: 1rem;
       }
+      @media only screen and (max-width: 768px) {
+        .next {
+          margin-bottom: 5rem;
+        }
+      }
     }
   }
   .content-parent {
@@ -202,10 +195,25 @@ export default {
     align-items: center;
     justify-content: center;
     height: 100%;
-
     .block {
       display: flex;
       flex-direction: row;
+      @media only screen and (max-width: 768px) { 
+        flex-direction: column; 
+        align-items: center;
+      }
+      .p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+      }
+      .s {
+        display: inline;
+        font-size: 1.3em;
+        font-weight: 600;
+      }
       .block-subtitle {
         font-family: 'Beyond-Infinity';  //'hand2';
         font-size: calc(min(2rem,min(100vh/22,100vw/15)));
@@ -224,6 +232,7 @@ export default {
           display: inline-block;
           font-family: 'Beyond-Infinity';
           font-size: calc(min(2rem,min(100vh/18,100vw/15)));
+          color:  #000000;
         }
         .pointer {
           display: inline-block;
@@ -232,7 +241,11 @@ export default {
       }
       .l-image {
         position: relative;
-        width: 40%;      
+        width: 40%;
+        @media only screen and (max-width: 768px) { 
+          width: 60%;
+          padding-bottom: 2rem;
+        }
         display: flex;
         align-content: center;
         justify-content: center;  
@@ -245,6 +258,10 @@ export default {
       .r-text {
         width: 60%;
         padding-left: 10%;
+        @media only screen and (max-width: 768px) { 
+          width: 80%;
+          padding-left: 0;
+        }
       }
     }
 
@@ -263,6 +280,7 @@ export default {
         h2 {
           margin-block-start: 0.3em;
           margin-block-end: 0.3em;
+          font-size: 1em;
         }
       }
     }
