@@ -1,11 +1,9 @@
 <template>
   <div>
     <div id="menu-main" class="header">
-      <div class="nav-desktop">
+      <div class="navbar">
         <div class="logo">
           <img class="img" src="~/assets/images/logo_only_new_tr.png"/>
-        </div>
-        <div class="spacer">
         </div>
         <div class="menu">
           <div class="link-holder">
@@ -14,6 +12,11 @@
             <div class="nav-item"><NuxtLink to="/chat_automation">Chatbots</NuxtLink></div>
             <div class="nav-item"><NuxtLink to="/ai_sales_assistant">AI Sales Assistant</NuxtLink></div>
           </div>
+        </div>
+        <div class="hamburger" v-on:click="toggleMenu()">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
       </div>
     </div>
@@ -58,23 +61,21 @@
     padding-bottom: 1rem;
     background: 'rgba(0, 0, 0, 0.0)';
 
-    .nav-desktop {
+    .navbar {
       max-width: calc(min(50rem,80%));
       margin: auto;
       display: flex;
+      justify-content: space-between;
       padding-top: 1.5rem;
       .logo {
-        flex: 1 1 auto;
+        //flex: 1 1 auto;
         .img {
           width: 2.5rem;
           height: 2.5rem;
         }
       }
-      .spacer {
-        flex: 50 0.1 auto;
-      }
       .menu {
-        flex: 2 1 auto;
+        //flex: 2 1 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -85,6 +86,42 @@
             padding-left: 1rem;
             color: black;
           }
+        }
+      }
+      .hamburger {
+        display: none;
+        .bar {
+          display: block;
+          width: 25px;
+          height: 3px;
+          margin: 5px auto;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          background-color: #101010;
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        .menu {
+            position: fixed;
+            left: -100%;
+            top: 5rem;
+            flex-direction: column;
+            background-color: #fff;
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow:
+                0 10px 27px rgba(0, 0, 0, 0.05);
+        }
+
+        .menu.active {
+          left: 0;
+        }
+
+        .hamburger {
+          display: block;
+          cursor: pointer;
         }
       }
     }
@@ -122,3 +159,21 @@
     }
   }
 </style>
+
+
+<script>
+// TODO: mobile menu
+
+export default {
+  methods: {
+
+    toggleMenu: function () {
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".menu");
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+      console.log("toggle");
+    }
+  }
+}
+</script>

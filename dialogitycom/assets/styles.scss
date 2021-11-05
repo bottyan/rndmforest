@@ -22,6 +22,19 @@
      url(~assets/fonts/Beyond-Infinity.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "hand2";
+    src: local("hand2"),
+     url(~assets/fonts/Shorelines-Script-Bold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "hand3";
+    src: local("hand3"),
+     url(~assets/fonts/Best-Deals.ttf) format("truetype");
+}
+
+
 body {
   font-family: 'Neris', 'Roboto', sans-serif;
   margin: 0;
@@ -50,6 +63,6 @@ body {
 }
 .font-hand-L {
     font-family: 'Beyond-Infinity', 'Roboto', sans-serif;
-    font-size: calc(min(5rem,min(100vh/18,100vw/25)));
+    font-size: calc(min(5rem,min(100vh/18,100vw/15)));
 }
 

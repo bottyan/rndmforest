@@ -33,17 +33,64 @@
             <img src="~/assets/images/robot-hand.png"/>
           </div>
           <div class="r-text">
+            <div class="block-subtitle">Help quick and get more business</div>
             <div class="block-title">Live Chat</div>
-            <div class="block-content">Easy to use, free live chat for websites.</div>
+            <div class="block-content">
+              <p>Online communication app that enables you and your website visitors to chat in real-time.</p>
+
+              <!--p>It's a great alternative to phone calls or emails. All you or your visitors need to do is 
+              to type  the message inside the chat box and send it. </p-->
+
+              <p>Nowadays, 79 percent of customers prefer live chat to any other communication medium.</p>
+              <div class="read-more"><div class="text">more</div><div class="pointer">👉</div></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="section section3">
-      Live Chat 3
+      <div class="content-parent">
+        <div class="block max-width">
+          <div class="l-image">
+            <img src="~/assets/images/robot-hand.png"/>
+          </div>
+          <div class="r-text">
+            <div class="block-subtitle">Help quick and get more business</div>
+            <div class="block-title">Live Chat</div>
+            <div class="block-content">
+              <p>Online communication app that enables you and your website visitors to chat in real-time.</p>
+
+              <!--p>It's a great alternative to phone calls or emails. All you or your visitors need to do is 
+              to type  the message inside the chat box and send it. </p-->
+
+              <p>Nowadays, 79 percent of customers prefer live chat to any other communication medium.</p>
+              <div class="read-more"><div class="text">more</div><div class="pointer">👉</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="section section4">
-      Live Chat 4
+      <div class="content-parent">
+        <div class="block max-width">
+          <div class="l-image">
+            <img src="~/assets/images/robot-hand.png"/>
+          </div>
+          <div class="r-text">
+            <div class="block-subtitle">Help quick and get more business</div>
+            <div class="block-title">Live Chat</div>
+            <div class="block-content">
+              <p>Online communication app that enables you and your website visitors to chat in real-time.</p>
+
+              <!--p>It's a great alternative to phone calls or emails. All you or your visitors need to do is 
+              to type  the message inside the chat box and send it. </p-->
+
+              <p>Nowadays, 79 percent of customers prefer live chat to any other communication medium.</p>
+              <div class="read-more"><div class="text">more</div><div class="pointer">👉</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -159,17 +206,40 @@ export default {
     .block {
       display: flex;
       flex-direction: row;
+      .block-subtitle {
+        font-family: 'Beyond-Infinity';  //'hand2';
+        font-size: calc(min(2rem,min(100vh/22,100vw/15)));
+      }
       .block-title {
         font-size:4em;
         font-family: 'Gotham-Black', 'Roboto', sans-serif;
         margin-bottom: 1rem;
       }
+      .read-more {
+        cursor: pointer;
+        display: flex;
+        align-content: center;
+        .text {
+          text-decoration: underline;
+          display: inline-block;
+          font-family: 'Beyond-Infinity';
+          font-size: calc(min(2rem,min(100vh/18,100vw/15)));
+        }
+        .pointer {
+          display: inline-block;
+          margin-left: 0.5rem;
+        }
+      }
       .l-image {
         position: relative;
-        width: 40%;        
+        width: 40%;      
+        display: flex;
+        align-content: center;
+        justify-content: center;  
         img {
           max-width: 100%;
-          max-height: 80vh;
+          height: auto;
+          margin: auto;
         }
       }
       .r-text {
