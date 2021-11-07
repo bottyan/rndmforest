@@ -30,7 +30,7 @@
       <div class="content-parent">
         <div class="block max-width">
           <div class="l-image">
-            <img src="~/assets/images/robot-hand.png"/>
+            <img src="~/assets/images/dialogity_chat.png"/>
           </div>
           <div class="r-text">
             <div class="block-subtitle">Help quick and get more business</div>
@@ -133,12 +133,18 @@ export default {
       tlh.fromTo(header, { background: 'rgba(255, 255, 255, 0.0)' }, { duration: 1, background: 'rgba(255, 255, 255, 1)', ease: "none" })
         .to(tohide, { duration: 1, opacity: 0, ease: "none" }, "<") ;
 
+      
+      const mid = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section3', start:'top bottom', end:'bottom top', scrub: true}});
+      mid
+        .to(bg, { duration: 1, background: 'rgba(0,88,155,0.2)', ease: "none" })
+        .to(bg, { duration: 1, background: 'rgba(255,255,255,0)', ease: "none" });
+
+
       const tlf = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.footer', start:'top bottom', end:'bottom bottom', scrub: true}});
       tlf
-        // .fromTo(container,  { background: 'rgba(255, 255, 255, 0.0)' }, { duration: 1, background: 'rgba(245,223,77,0.549918014012026)', ease: "none" })
-        // .fromTo(footer,  { background: 'rgba(255, 255, 255, 0.0)' }, { duration: 1, background: 'rgba(245,223,77,0.549918014012026)', ease: "none" }, "<");
-        .fromTo(container, {background: 'rgba(255,255,255,0)'}, { duration: 1, background: 'rgba(245,223,77,0.549918014012026)', ease: "none" })
-        .to(footer, { duration: 1, background: 'rgba(245,223,77,0.549918014012026)', ease: "none" }, "<");
+        .to(bg, { duration: 1, background: 'rgba(245,223,77,0.549918014012026)', ease: "none" })
+        // .fromTo(container, {background: 'rgba(255,255,255,0)'}, { duration: 1, background: 'rgba(245,223,77,0.549918014012026)', ease: "none" })
+        // .to(footer, { duration: 1, background: 'rgba(245,223,77,0.549918014012026)', ease: "none" }, "<");
 
       
 
@@ -156,7 +162,7 @@ export default {
   }
   .bg {
     z-index: 1;
-    height: 100vh;
+    height: 115vh;
     width: 100%;
     background: linear-gradient(141deg, rgba(0,160,176,0.3) 0%, rgba(207,92,120,0.3) 100%);
     position: fixed;
@@ -181,7 +187,8 @@ export default {
       justify-content: center;
       .next {
         flex: 1 1 auto;
-        margin-bottom: 1rem;
+        //margin-bottom: 1rem;
+        margin-bottom: 5rem;
       }
       @media only screen and (max-width: 768px) {
         .next {
@@ -219,7 +226,7 @@ export default {
         font-size: calc(min(2rem,min(100vh/22,100vw/15)));
       }
       .block-title {
-        font-size:4em;
+        font-size:calc(min(4rem,min(100vh/18,100vw/13)));
         font-family: 'Gotham-Black', 'Roboto', sans-serif;
         margin-bottom: 1rem;
       }

@@ -4,7 +4,7 @@
       <div class="navbar">
         <div class="logo">
           <NuxtLink to="/">
-            <img class="img" src="~/assets/images/logo_w_text_n.png"/>
+            <img class="img" src="~/assets/images/logo_w_text_bw.png"/>
           </NuxtLink>
         </div>
         <div class="menu">
