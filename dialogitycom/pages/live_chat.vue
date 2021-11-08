@@ -8,12 +8,13 @@
           <div class="above-title"></div>
           <div class="title font-XXL">
             <h1>
-              <div>MEANINGFUL CONVERSATION
+              <div>FRIENDLY LIVE CHAT
               </div>
             </h1>
+            
           </div>
           <div class="below-title font-XL">
-            <h2>with your customers</h2>
+            <h2>with handy features</h2>
           </div>
         </div>
       </div>
@@ -21,65 +22,26 @@
         <div class="bottom-container max-width">
           <div class="flex-space"></div>
           <div id="hide" class="next font-hand-L">
-            what we do 👇
+            see features 🕶️👇
           </div>
         </div>
       </div>
     </div>
     <div class="section section2">
-      <div class="content-parent">
-        <div class="block max-width">
-          <div class="l-image">
-            <img src="~/assets/images/dialogity_chat.png"/>
-          </div>
-          <div class="r-text">
-            <div class="block-subtitle">Help quick and get more business</div>
-            <div class="block-title">Live Chat</div>
-            <div class="block-content">
-              <div class="p">Enables you and your website visitors to chat in real-time.</div>
-              <div class="p">Nowadays, <div class="s">79%</div> of customers prefer live chat to any other communication medium.</div>
-              <div class="read-more"><NuxtLink to="/live_chat"><div class="text">more</div><div class="pointer">👉</div></NuxtLink></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
     <div class="section section3">
-      <div class="content-parent">
-        <div class="block max-width">
-          <div class="l-image">
-            <img src="~/assets/images/robot-hand.png"/>
-          </div>
-          <div class="r-text">
-            <div class="block-subtitle">Answers in 7x24 by automation</div>
-            <div class="block-title">Chatbots</div>
-            <div class="block-content">
-              <div class="p">Answer common questions immediately by automation and reduce manual workload.</div>
-              <div class="p"><div class="s">60%</div> of customers expect immediate response which is a daunting task without automation.</div>
-              <div class="read-more"><NuxtLink to="/chat_automation"><div class="text">more</div><div class="pointer">👉</div></NuxtLink></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
     <div class="section section4">
-      <div class="content-parent">
-        <div class="block max-width">
-          <div class="l-image">
-            <img src="~/assets/images/robot-head-r.png"/>
-          </div>
-          <div class="r-text">
-            <div class="block-subtitle">Truely engaging conversation</div>
-            <div class="block-title">AI Sales Assisstant</div>
-            <div class="block-content">
-              <div class="p">New way of building conversations by machine learning.</div>
-              <div class="p">Automatically finds the best way of explaining complex products based on your knowledge base.</div>
-              <div class="read-more"><NuxtLink to="/ai_sales_assistant"><div class="text">more</div><div class="pointer">👉</div></NuxtLink></div>
-            </div>
-          </div>
-        </div>
+      
+    </div>
+
+    <div class="anim-holder">
+      <div class="anim-frame">
       </div>
     </div>
+
   </div>
 </template>
 
@@ -105,6 +67,7 @@ export default {
       const footer = document.querySelector('.footer');
       const bg = document.querySelector('.bg');
       const tohide = document.querySelector('#hide');
+      const animHolder = document.querySelector('.anim-holder');
 
       const _gsap = this.$gsap;
       const colorize = function(element) {
@@ -116,14 +79,16 @@ export default {
           _gsap.set(bg, 
             { 
               //backgroundImage:"-webkit-linear-gradient(top," + this.vars.colorProps.top + ", " + this.vars.colorProps.bottom + ")",
-              background: "linear-gradient(141deg, " + "rgba(0,160,176," + r + ")" + " 0%, " + "rgba(207,92,120," + r + ")" + " 100%)"
+              background: "linear-gradient(141deg, " + "rgba(245,223,77," + r + ")" + " 0%, " + "rgba(207,92,120," + r + ")" + " 100%)"
             });
         }
       }
       
       const tl = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section1', start:'top top', end:'bottom top', scrub: true}});
-      tl.fromTo(bg, {}, {duration: 1, ease: "none", onUpdate:colorize})
-        ;
+      tl.fromTo(bg, {}, {duration: 1, ease: "none", onUpdate:colorize});
+
+      const tl_anim = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section1', start:'bottom center', end:'bottom top', scrub: true}});
+      tl_anim.fromTo(animHolder, {opacity: 0}, {opacity: 1, duration: 1, ease: "none"});
         
       // tl.fromTo(container, 
       //       { background: 'linear-gradient(141deg, rgba(0,160,176,0.299918014012026) 0%, rgba(207,92,120,0.3027270027760709) 100%)' },
@@ -143,6 +108,7 @@ export default {
       const tlf = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.footer', start:'top bottom', end:'bottom bottom', scrub: true}});
       tlf
         .to(bg, { duration: 1, background: 'rgba(245,223,77,0.549918014012026)', ease: "none" })
+        .to(animHolder, { duration: 1, opacity: 0, ease: "none" })
         // .fromTo(container, {background: 'rgba(255,255,255,0)'}, { duration: 1, background: 'rgba(245,223,77,0.549918014012026)', ease: "none" })
         // .to(footer, { duration: 1, background: 'rgba(245,223,77,0.549918014012026)', ease: "none" }, "<");
 
@@ -164,10 +130,25 @@ export default {
     z-index: 1;
     height: 115vh;
     width: 100%;
-    background: linear-gradient(141deg, rgba(0,160,176,0.3) 0%, rgba(207,92,120,0.3) 100%);
+    background: linear-gradient(141deg, rgba(245,223,77,0.3) 0%, rgba(207,92,120,0.3) 100%);
     position: fixed;
     top: 0px;
     left: 0px;
+  }
+  .anim-holder {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    .anim-frame {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: blue;
+
+    }
   }
   .section {
     position: relative;
@@ -202,75 +183,7 @@ export default {
     align-items: center;
     justify-content: center;
     height: 100%;
-    .block {
-      display: flex;
-      flex-direction: row;
-      @media only screen and (max-width: 768px) { 
-        flex-direction: column; 
-        align-items: center;
-      }
-      .p {
-        display: block;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-      }
-      .s {
-        display: inline;
-        font-size: 1.3em;
-        font-weight: 600;
-      }
-      .block-subtitle {
-        font-family: 'Beyond-Infinity';  //'hand2';
-        font-size: calc(min(2rem,min(100vh/22,100vw/15)));
-      }
-      .block-title {
-        font-size:calc(min(4rem,min(100vh/18,100vw/13)));
-        font-family: 'Gotham-Black', 'Roboto', sans-serif;
-        margin-bottom: 1rem;
-      }
-      .read-more {
-        cursor: pointer;
-        display: flex;
-        align-content: center;
-        .text {
-          text-decoration: underline;
-          display: inline-block;
-          font-family: 'Beyond-Infinity';
-          font-size: calc(min(2rem,min(100vh/18,100vw/15)));
-          color:  #000000;
-        }
-        .pointer {
-          display: inline-block;
-          margin-left: 0.5rem;
-        }
-      }
-      .l-image {
-        position: relative;
-        width: 40%;
-        @media only screen and (max-width: 768px) { 
-          width: 60%;
-          padding-bottom: 2rem;
-        }
-        display: flex;
-        align-content: center;
-        justify-content: center;  
-        img {
-          max-width: 100%;
-          height: auto;
-          margin: auto;
-        }
-      }
-      .r-text {
-        width: 60%;
-        padding-left: 10%;
-        @media only screen and (max-width: 768px) { 
-          width: 80%;
-          padding-left: 0;
-        }
-      }
-    }
+    
 
     .header {
 

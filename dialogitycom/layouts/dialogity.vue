@@ -40,8 +40,8 @@
         </div>
         <div class="col col3">
           <div class="footer-block">
-            <div class="footer-item"><NuxtLink to="/terms_of_service">Login</NuxtLink></div>
-            <div class="footer-item"><NuxtLink to="/terms_of_service">Registration</NuxtLink></div>
+            <div class="footer-item"><a href="https://app.dialogity.com/login">Login</a></div>
+            <div class="footer-item"><a href="https://app.dialogity.com/registration">Registration</a></div>
             <div class="footer-item"><NuxtLink to="/terms_of_service">Documentation</NuxtLink></div>
           </div>
           <div class="footer-block">
