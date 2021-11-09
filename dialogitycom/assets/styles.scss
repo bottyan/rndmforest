@@ -31,7 +31,7 @@
 @font-face {
     font-family: "hand3";
     src: local("hand3"),
-     url(~assets/fonts/Best-Deals.ttf) format("truetype");
+     url(~assets/fonts/NothingYouCouldDo-Regular.ttf) format("truetype");
 }
 
 
@@ -44,6 +44,10 @@ body {
 
 .max-width {
     max-width: calc(min(50rem,80%));
+    margin: auto;
+}
+.max2-width {
+    max-width: calc(min(58rem,96%));
     margin: auto;
 }
 .flex-space {
@@ -64,5 +68,9 @@ body {
 .font-hand-L {
     font-family: 'Beyond-Infinity', 'Roboto', sans-serif;
     font-size: calc(min(5rem,min(100vh/18,100vw/15)));
+}
+.font-hand-M {
+    font-family: 'hand3', 'Roboto', sans-serif;
+    font-size: calc(min(4rem,min(100vh/27,100vw/23)));
 }
 
