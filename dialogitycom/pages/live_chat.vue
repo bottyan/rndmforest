@@ -28,7 +28,35 @@
       </div>
     </div>
     <div class="section section2">
-      
+      <div class="anim-holder">
+        <div class="anim-frame">
+          <div class="demo_holder max2-width">
+            <div class="demo_frame">
+              <div class="image_holder">
+                <div class="text-holder">
+                  <div class="install1 text-center text-def font-hand-M">
+                    <div class="text-inner">Just a few click to install 👆</div>
+                  </div>
+                  <div class="install2 text-center text-def font-hand-M">
+                    <div class="text-inner">🏗️ Add this tiny code to your site.</div>
+                  </div>
+                  <div class="install3 text-center text-def font-hand-M">
+                    Edit the sites code or use a tag manager.
+                  </div>
+                </div>
+                <img class="img1" src="~/assets/images/demo_live_chat/s1 01 main screen.webp"/>
+                <img class="img2 imgb" src="~/assets/images/demo_live_chat/s1 01 main screen b.webp"/>
+                <img class="img3 imgb" src="~/assets/images/demo_live_chat/02 install.webp"/>
+                <img class="img4 imgb" src="~/assets/images/demo_live_chat/02 install b.webp"/>
+
+                <img class="img5 imgb" src="~/assets/images/demo_live_chat/03.webp"/>
+                <img class="img6 imgb" src="~/assets/images/demo_live_chat/04.webp"/>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="section section3">
       
@@ -37,31 +65,7 @@
       
     </div>
 
-    <div class="anim-holder">
-      <div class="anim-frame">
-        <div class="demo_holder max2-width">
-          <div class="demo_frame">
-            <div class="image_holder">
-              <div class="text-holder">
-                <div class="install1 text-def font-hand-M">
-                  Just a few click to install 👆
-                </div>
-                <div class="install2 text-def font-hand-M">
-                  Insert this code to your website.
-                </div>
-                <div class="install3 text-def font-hand-M">
-                  For example, you can use a tag manager.
-                </div>
-              </div>
-              <img class="img1" src="~/assets/images/demo_live_chat/s1 01 main screen.webp"/>
-              <img class="img2 imgb" src="~/assets/images/demo_live_chat/s1 01 main screen b.webp"/>
-              <img class="img3 imgb" src="~/assets/images/demo_live_chat/02 install.webp"/>
-              <img class="img4 imgb" src="~/assets/images/demo_live_chat/02 install b.webp"/>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
 
   </div>
 </template>
@@ -116,31 +120,60 @@ export default {
       const t2 = document.querySelector('.install2');
       const t3 = document.querySelector('.install3');
       const img4 = document.querySelector('.img4');
-      const tl_anim = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section2', start:'top top', end:'bottom top', scrub: true}});
-      tl_anim.fromTo(animHolder, { opacity: 0 }, { duration: 0.5, opacity: 1, ease: "none" })
-        .to(img1, {opacity: 0, duration: 1, ease: "none"},"+=2")
-        .to(t1, {opacity: 1, duration: 1, ease: "none"},"<")
-        .to(img2, {opacity: 0, duration: 1, ease: "none"},"+=2")
+      const img5 = document.querySelector('.img5');
+      const img6 = document.querySelector('.img6');
+      //const t4 = document.querySelector('.install4');
+      const tl_anim = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section2', start:'top center', end:'bottom top', scrub: true}});
+      tl_anim
+        //.fromTo(animHolder, { opacity: 0 }, { duration: 0.5, opacity: 1, ease: "none" })
+        .to(t1, {opacity: 1, duration: 1, ease: "none"},)
+        .to(img1, {opacity: 0, duration: 1, ease: "none"},"<")
+        
+        .to(img1, {opacity: 1, duration: 1, ease: "none"},)
         .to(t1, {opacity: 0, duration: 1, ease: "none"},"<")
-        .to(img3, {opacity: 0, duration: 1, ease: "none"},"+=2")
-        .to(t2, {opacity: 1, duration: 1, ease: "none"},"<")
-        .to(t3, {opacity: 1, duration: 1, ease: "none"},"+=1")
-        .from(t3, {x: "-100%", duration: 1, ease: "none"},"<")
+        
+        .to(img1, {opacity: 0, duration: 1, ease: "none"},)
+        .to(img2, {opacity: 1, duration: 1, ease: "none"},"<")
+
+        .to(t2, {opacity: 1, duration: 1, ease: "none"},"+=0.5")
+        .to(img2, {opacity: 0, duration: 1, ease: "none"},"<")
+
+        .to(img2, {opacity: 0, duration: 1, ease: "none"},"+1")
+        .to(t2, {opacity: 0, duration: 1, ease: "none"},"<")
+
+        .to(img3, {opacity: 1, duration: 1, ease: "none"},"+=1")
+        .to(t2, {opacity: 0, duration: 1, ease: "none"},"<")
+
+        .to(img3, {opacity: 0, duration: 1, ease: "none"},"+=1")
+        .to(img4, {opacity: 1, duration: 1, ease: "none"},"<")
+
+        .to(img4, {opacity: 0, duration: 1, ease: "none"},"+=1")
+        .to(img4, {x: "+100%", duration: 1, ease: "none"},"<")
+        .to(t3, {opacity: 1, duration: 1, ease: "none"},"<")
+
+        .to(t3, {opacity: 0, duration: 1, ease: "none"},"+=1")
+        .to(img5, {opacity: 1, duration: 1, ease: "none"},"<")
+
+        .to(img5, {opacity: 0, duration: 1, ease: "none"},"+=1")
+        .to(img6, {opacity: 1, duration: 1, ease: "none"},"<")
+
+        .to(img6, {opacity: 0, duration: 1, ease: "none"},"+=1")
+        //.from(t3, {x: "-100%", duration: 1, ease: "none"},"<")
         ;
         
       // tl.fromTo(container, 
       //       { background: 'linear-gradient(141deg, rgba(0,160,176,0.299918014012026) 0%, rgba(207,92,120,0.3027270027760709) 100%)' },
       //       { duration: 1, background: 'rgba(255, 255, 255, 0.0)', ease: "none" });
 
-      const tlh = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section1', start:'top top', end:'bottom top', scrub: true}});
-      tlh.fromTo(header, { background: 'rgba(255, 255, 255, 0.0)' }, { duration: 1, background: 'rgba(255, 255, 255, 1)', ease: "none" })
-        .to(tohide, { duration: 1, opacity: 0, ease: "none" }, "<") ;
+      // const tlh = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section1', start:'top top', end:'bottom top', scrub: true}});
+      // tlh.fromTo(header, { background: 'rgba(255, 255, 255, 0.0)' }, { duration: 1, background: 'rgba(255, 255, 255, 1)', ease: "none" })
+      //   .to(tohide, { duration: 1, opacity: 0, ease: "none" }, "<") ;
 
       
-      const mid = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section3', start:'top bottom', end:'bottom top', scrub: true}});
-      mid
-        .to(bg, { duration: 1, background: 'rgba(0,88,155,0.2)', ease: "none" })
-        .to(bg, { duration: 1, background: 'rgba(255,255,255,0)', ease: "none" });
+      // const mid = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section3', start:'top bottom', end:'bottom top', scrub: true}});
+      // mid
+      //   .to(bg, { duration: 1, background: 'rgba(0,88,155,0.2)', ease: "none" })
+      //   .to(bg, { duration: 1, background: 'rgba(255,255,255,0)', ease: "none" });
 
 
       const tlf = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.footer', start:'top bottom', end:'bottom bottom', scrub: true}});
@@ -174,24 +207,19 @@ export default {
     left: 0px;
   }
   .anim-holder {
-    position: fixed;
-    width: 100vw;
+    position: sticky;
+    width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
     z-index: 20;
-    opacity: 0;
+    //opacity: 0;
     .anim-frame {
       position: relative;
       width: 100%;
       height: 100%;
-      background-color: rgba(245,223,77,0.1);
+      //background-color: rgba(245,223,77,0.1);
     }
-  }
-
-  .section2 {
-    //background-color: burlywood;
-    height: 400vh;
   }
   .demo_holder {
     height: 100%;
@@ -209,6 +237,7 @@ export default {
       .image_holder {
         position: relative;
         overflow: hidden;
+        background: white;
         // border-left: 0.1rem solid rgb(128, 107, 81);
         // border-top: 0.1rem solid rgb(128, 107, 81);
         //border: 1px solid black;
@@ -216,13 +245,15 @@ export default {
           position: relative;
           width: 100%;
           max-height: 100%;
+          display: block;
         }
         .imgb {
           position: absolute;
           top: 0;
           left: 0;
+          opacity: 0;
         }
-        .img1 { z-index: 10; }
+        .img1 { z-index: 10; opacity: 0; }
         .img2 { z-index: 9; }
         .img3 { z-index: 8; }
         .img4 { z-index: 7; }
@@ -238,20 +269,20 @@ export default {
             position: absolute;
             opacity: 0;
           }
-          .install1 {
-            width: 50%;
-            top: 20%;
-            left: 25%; 
+          .text-center {
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            left: 0%; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
           }  
           .install2 {
-            width: 75%;
-            top: 10%;
-            left: 13%; 
+            
           }
           .install3 {
-            width: 75%;
-            top: 70%;
-            left: 13%; 
+            
           }  
         }
       }
@@ -274,6 +305,10 @@ export default {
     width: 100%;
     height: 100vh;
     z-index: 10;
+  }
+  .section2 {
+    //background-color: burlywood;
+    height: 800vh;
   }
   .bottom {
     position: absolute;

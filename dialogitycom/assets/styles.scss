@@ -47,8 +47,8 @@ body {
     margin: auto;
 }
 .max2-width {
-    max-width: calc(min(58rem,96%));
-    margin: auto;
+    max-width: calc(min(58rem,100% - 2rem));
+margin: auto;
 }
 .flex-space {
     flex: 100 0.01 auto;
