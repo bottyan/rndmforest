@@ -31,6 +31,9 @@
       <div class="anim-holder">
         <div class="anim-frame">
           <div class="demo_holder max2-width">
+            <div class="frame_title">
+              <div class="text-inner">Easy installation</div>
+            </div>
             <div class="demo_frame">
               <div class="image_holder">
                 <div class="text-holder">
@@ -41,7 +44,7 @@
                     <div class="text-inner">🏗️ Add this tiny code to your site.</div>
                   </div>
                   <div class="install3 text-center text-def font-hand-M">
-                    Edit the sites code or use a tag manager.
+                    <div class="text-inner">Edit the sites code or use a tag manager.</div>
                   </div>
                 </div>
                 <img class="img1" src="~/assets/images/demo_live_chat/s1 01 main screen.webp"/>
@@ -51,6 +54,7 @@
 
                 <img class="img5 imgb" src="~/assets/images/demo_live_chat/03.webp"/>
                 <img class="img6 imgb" src="~/assets/images/demo_live_chat/04.webp"/>
+                <img class="img7 imgb" src="~/assets/images/demo_live_chat/12 on site with welcome message.webp"/>
 
               </div>
             </div>
@@ -59,10 +63,99 @@
       </div>
     </div>
     <div class="section section3">
-      
+      <div class="anim-holder">
+        <div class="anim-frame">
+          <div class="demo_holder max2-width">
+            <div class="frame_title">
+              <div class="text-inner">Customization</div>
+            </div>
+            <div class="demo_frame">
+              <div class="image_holder">
+                <div class="text-holder">
+                  <div class="custom1 text-center text-def font-hand-M">
+                    <div class="text-inner">Select logo and color 🎨</div>
+                  </div>
+                  <div class="custom2 text-center text-def font-hand-M">
+                    <div class="text-inner">Write welcome message.</div>
+                  </div>
+                  <!--div class="custom3 text-center text-def font-hand-M">
+                    <div class="text-inner">Edit the sites code or use a tag manager.</div>
+                  </div-->
+                </div>
+                <img class="imgb1" src="~/assets/images/demo_live_chat/07 settings messages.webp"/>
+                <img class="imgb2 imgb" src="~/assets/images/demo_live_chat/06 customization avatar.webp"/>
+                <img class="imgb3 imgb" src="~/assets/images/demo_live_chat/05 customization color.webp"/>
+                <img class="imgb4 imgb" src="~/assets/images/demo_live_chat/08 welcome popup enable.webp"/>
+                <img class="imgb5 imgb" src="~/assets/images/demo_live_chat/09 welcome popup.webp"/>
+
+                <!--img class="imgb6 imgb" src="~/assets/images/demo_live_chat/04.webp"/-->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="section section4">
-      
+      <div class="anim-holder">
+        <div class="anim-frame"> 
+          <div class="demo_holder max2-width">
+            <div class="frame_title">
+              <div class="text-inner">Answer quickly and easily</div>
+            </div>
+
+            <div class="multi-frame">
+
+              <div class="demo_frame frame1 maxh2-width">
+                <div class="image_holder">
+                  <div class="text-holder">
+                    <div class="dt1 text-center text-def font-hand-M">
+                      <div class="text-inner">Select logo and color 🎨</div>
+                    </div>
+                    <div class="dt2 text-center text-def font-hand-M">
+                      <div class="text-inner">Write welcome message.</div>
+                    </div>
+                    <!--div class="custom3 text-center text-def font-hand-M">
+                      <div class="text-inner">Edit the sites code or use a tag manager.</div>
+                    </div-->
+                  </div>
+                  <img class="imgc1" src="~/assets/images/demo_live_chat/12 on site with welcome message - s.webp"/>
+                  <img class="imgc2 imgb" src="~/assets/images/demo_live_chat/13 on site empty box - s.webp"/>
+                  <img class="imgc3 imgb" src="~/assets/images/demo_live_chat/14 hi notification s.webp"/>
+                  <img class="imgc4 imgb" src="~/assets/images/demo_live_chat/14 answer received s.webp"/>
+
+                  <!--img class="imgc5 imgb" src="~/assets/images/demo_live_chat/09 welcome popup.webp"/>
+                  <img class="imgc6" src="~/assets/images/demo_live_chat/14 hi notification c.webp"/>
+                  <!img class="imgb6 imgb" src="~/assets/images/demo_live_chat/04.webp"/-->
+
+                </div>
+              </div>
+              <div class="demo_frame frame2 maxh2-width">
+                <div class="image_holder">
+                  <div class="text-holder">
+                    <div class="dat1 text-center text-def font-hand-M">
+                      <div class="text-inner">🦸‍♀️ Agent is ready to answer questsion.</div>
+                    </div>
+                    <div class="dat2 text-center text-def font-hand-M">
+                      <div class="text-inner">And she can do it immediately in the dynamic notification email.</div>
+                    </div>
+                    <!--div class="custom3 text-center text-def font-hand-M">
+                      <div class="text-inner">Edit the sites code or use a tag manager.</div>
+                    </div-->
+                  </div>
+                  <img class="imgca1" src="~/assets/images/demo_live_chat/17 email noti s.webp"/>
+                  <img class="imgca2 imgb" src="~/assets/images/demo_live_chat/18 answer from email sent s.webp"/>
+                  
+                  
+                  <!--img class="imgb6 imgb" src="~/assets/images/demo_live_chat/04.webp"/-->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     
@@ -113,6 +206,9 @@ export default {
       tl.fromTo(bg, {}, {duration: 1, ease: "none", onUpdate:colorize})
         ;
 
+      // =====================================================
+      // == ANIM 1
+      // =====================================================
       const img1 = document.querySelector('.img1');
       const t1 = document.querySelector('.install1');
       const img2 = document.querySelector('.img2');
@@ -122,8 +218,9 @@ export default {
       const img4 = document.querySelector('.img4');
       const img5 = document.querySelector('.img5');
       const img6 = document.querySelector('.img6');
+      const img7 = document.querySelector('.img7');
       //const t4 = document.querySelector('.install4');
-      const tl_anim = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section2', start:'top center', end:'bottom top', scrub: true}});
+      const tl_anim = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section2', start:'top top', end:'bottom bottom', scrub: true}});
       tl_anim
         //.fromTo(animHolder, { opacity: 0 }, { duration: 0.5, opacity: 1, ease: "none" })
         .to(t1, {opacity: 1, duration: 1, ease: "none"},)
@@ -150,17 +247,111 @@ export default {
         .to(img4, {opacity: 0, duration: 1, ease: "none"},"+=1")
         .to(img4, {x: "+100%", duration: 1, ease: "none"},"<")
         .to(t3, {opacity: 1, duration: 1, ease: "none"},"<")
+        .from(t3, {x: "-100%", duration: 1, ease: "none"},"<")
 
-        .to(t3, {opacity: 0, duration: 1, ease: "none"},"+=1")
+        .to(t3, {opacity: 0, duration: 1, ease: "none"},"+=2")
         .to(img5, {opacity: 1, duration: 1, ease: "none"},"<")
 
         .to(img5, {opacity: 0, duration: 1, ease: "none"},"+=1")
         .to(img6, {opacity: 1, duration: 1, ease: "none"},"<")
 
         .to(img6, {opacity: 0, duration: 1, ease: "none"},"+=1")
-        //.from(t3, {x: "-100%", duration: 1, ease: "none"},"<")
+        .to(img7, {opacity: 1, duration: 1, ease: "none"},"<")
+
+        .to(img7, {opacity: 0.99, duration: 1, ease: "none"},"+=2")
+        ;
+
+      // =====================================================
+      // == ANIM 2
+      // =====================================================
+      const tc1 = document.querySelector('.custom1');
+      const tc2 = document.querySelector('.custom2');
+      const imgb1 = document.querySelector('.imgb1');
+      const imgb2 = document.querySelector('.imgb2');
+      const imgb3 = document.querySelector('.imgb3');
+      const imgb4 = document.querySelector('.imgb4');
+      const imgb5 = document.querySelector('.imgb5');
+      
+      const tl_anim2 = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section3', start:'top top', end:'bottom bottom', scrub: true}});
+      tl_anim2
+        .to(tc1, {opacity: 1, duration: 0.1, ease: "none"},)
+        .to(imgb1, {opacity: 0, duration: 0.1, ease: "none"},"<")
+        
+        .to(tc1, {opacity: 0, duration: 1, ease: "none"},"+=1")
+        .to(imgb2, {opacity: 1, duration: 1, ease: "none"},"<")
+
+        .to(imgb3, {opacity: 1, duration: 1, ease: "none"},"+=1")
+        .to(imgb2, {opacity: 0, duration: 1, ease: "none"},"<")
+
+        .to(imgb3, {opacity: 0, duration: 1, ease: "none"},"+=1")
+        .to(tc2, {opacity: 1, duration: 1, ease: "none"},"<")
+
+        .to(tc2, {opacity: 0, duration: 1, ease: "none"},"+=1")
+        .to(imgb4, {opacity: 1, duration: 1, ease: "none"},"<")        
+
+        .to(imgb5, {opacity: 1, duration: 1, ease: "none"},"+=1")
+        .to(imgb4, {opacity: 0, duration: 1, ease: "none"},"<")
         ;
         
+      // =====================================================
+      // == ANIM 3
+      // =====================================================
+      const dt1 = document.querySelector('.dt1');
+      const dt2 = document.querySelector('.dt2');
+      const imgc1 = document.querySelector('.imgc1');
+      const imgc2 = document.querySelector('.imgc2');
+      const imgc3 = document.querySelector('.imgc3');
+      const imgc4 = document.querySelector('.imgc4');
+      const imgc5 = document.querySelector('.imgc5');
+      const imgc6 = document.querySelector('.imgc6');
+
+      const dat1 = document.querySelector('.dat1');
+      const dat2 = document.querySelector('.dat2');
+      const fr1 = document.querySelector('.frame1');
+      const fr2 = document.querySelector('.frame2');
+      const imgca1 = document.querySelector('.imgca1');
+      const imgca2 = document.querySelector('.imgca2');
+      
+      const tl_anim3 = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section4', start:'top top', end:'bottom bottom', scrub: true}});
+      tl_anim3
+
+        .to(imgc1, {opacity: 1, duration: 1, ease: "none"},)
+        .to(dat1, {opacity: 1, duration: 1, ease: "none"},"<")
+        .to(imgca1, {opacity: 0, duration: 1, ease: "none"},"<")
+        
+        .to(imgc1, {opacity: 0, duration: 1, ease: "none"},"+=1")
+        .to(imgc2, {opacity: 1, duration: 1, ease: "none"},"<")
+
+        .to(imgc2, {opacity: 0, duration: 1, ease: "none"},"+=1")
+        .to(imgc3, {opacity: 1, duration: 1, ease: "none"},"<")
+        
+        .to(imgca1, {opacity: 1, duration: 1, ease: "none"},"+=0.1")
+        .to(dat1, {opacity: 0, duration: 1, ease: "none"},"<")
+
+        .to(imgca1, {opacity: 0, duration: 1, ease: "none"},"+=1")
+        .to(dat2, {opacity: 1, duration: 1, ease: "none"},"<")
+
+        .to(dat2, {opacity: 0, duration: 1, ease: "none"},"+=1")
+        .to(imgca2, {opacity: 1, duration: 1, ease: "none"},"<")
+
+        .to(imgc3, {opacity: 0, duration: 1, ease: "none"},"+=0.1")
+        .to(imgc4, {opacity: 1, duration: 1, ease: "none"},"<")
+
+        // .to(imgc1, {display: "none", duration: 0, ease: "none"},"+=1")
+        // .to(imgc6, {display: "block", opacity: 1, duration: 0, ease: "none"},"<")
+        // .to(fr2, {className: "demo_frame", duration: 0, ease: "none"},"<")
+        //.to(fr2, {width: "100%", duration: 1, ease: "none"},"<")
+
+        // .to(tc2, {opacity: 1, duration: 1, ease: "none"},"<")
+
+        // .to(tc2, {opacity: 0, duration: 1, ease: "none"},"+=1")
+        // .to(imgb4, {opacity: 1, duration: 1, ease: "none"},"<")        
+
+        // .to(imgb5, {opacity: 1, duration: 1, ease: "none"},"+=1")
+        // .to(imgb4, {opacity: 0, duration: 1, ease: "none"},"<")
+        ;
+
+
       // tl.fromTo(container, 
       //       { background: 'linear-gradient(141deg, rgba(0,160,176,0.299918014012026) 0%, rgba(207,92,120,0.3027270027760709) 100%)' },
       //       { duration: 1, background: 'rgba(255, 255, 255, 0.0)', ease: "none" });
@@ -220,6 +411,10 @@ export default {
       height: 100%;
       //background-color: rgba(245,223,77,0.1);
     }
+    .multi-frame {
+      display: flex;
+      flex-direction: row;
+    }
   }
   .demo_holder {
     height: 100%;
@@ -227,19 +422,30 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    .frame_title {
+      font-family: 'Gotham-Black', 'Roboto', sans-serif;
+      font-size: calc(min(3rem,min(100vh/25,100vw/28)));
+      margin-bottom: 2rem;
+    }
     .demo_frame {
-      background: burlywood;
+      background: white;
       position: relative;
-      //border: 1px solid black;
+      border: 2px solid black;
       border-radius: 0.5rem;
-      padding: 2rem 0.5rem 0.5rem 0.5rem;
+      padding-top: 2rem;
+      //overflow: hidden;
+      //padding: 2rem 0.5rem 0.5rem 0.5rem;
       //background-color: #666;
       .image_holder {
         position: relative;
         overflow: hidden;
         background: white;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        border-top: 2px solid black;
         // border-left: 0.1rem solid rgb(128, 107, 81);
-        // border-top: 0.1rem solid rgb(128, 107, 81);
+        //border-top: 0.1rem solid rgb(128, 107, 81);
         //border: 1px solid black;
         img {
           position: relative;
@@ -257,7 +463,9 @@ export default {
         .img2 { z-index: 9; }
         .img3 { z-index: 8; }
         .img4 { z-index: 7; }
-      
+        .imgb1 { opacity: 0; }
+        .imgc6 { opacity: 0; display: none; }
+        .imgca1 { opacity: 0; }
         .text-holder {
           position: absolute;
           top: 0;
@@ -277,21 +485,35 @@ export default {
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
+            .text-inner {
+              padding: 1.5rem;
+            }
           }  
-          .install2 {
-            
+          .install1 {
+            opacity: 1;
           }
-          .install3 {
-            
-          }  
+          .custom1 {
+            opacity: 1;
+          }
+        }
+        .dat1 {
+          opacity: 1;
         }
       }
+    }
+    .frame2 {
+
+    }
+    .frame2-visible {
+
     }
     .demo_frame:after {
       content: "";
       width: 100%;
       height: 100%;
-      background-color: red;
+      background-color: #606060;
+      filter: blur(1px);
       position: absolute;
       top: 1rem;
       left: 1rem;
@@ -307,8 +529,13 @@ export default {
     z-index: 10;
   }
   .section2 {
-    //background-color: burlywood;
-    height: 800vh;
+    height: 600vh;
+  }
+  .section3 {
+    height: 350vh;
+  }
+  .section4 {
+    height: 350vh;
   }
   .bottom {
     position: absolute;
