@@ -1,56 +1,53 @@
 <template>
   <div class="max-width headspace">
-    <h1>Terms of Service</h1>
-    <h3>Effective Date: October 24th, 2021</h3>
+    <h1>Privacy Policy</h1>
+    <h3>Last updated 6th April, 2020</h3>
     <simple-paragraph>
-      Please read these Terms of Service (the “Agreement”) carefully before using the 
-      https://dialogity.com website and the Dialogity application (together, or individually, the “Services”) 
-      operated by RANDOM FOREST Kft. (“Dialogity”, “us”, “we”, or “our”). 
-      Your (“Customer,” “you”, or “your”) access to and use of the Services is conditioned 
-      upon your acceptance of and compliance with this Agreement. 
-      This Agreement applies to all visitors, users and others who wish to access or use the Services. 
-      By accessing or using the Services you agree to be bound by this Agreement. 
-      If you disagree with any part of this Agreement then you do not have permission to access 
-      the Services.
+      Thank you for choosing to be part of our community at Random Forest Kft., doing business as Dialogity (“Dialogity”, “we”, “us”, or “our”). 
+      We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, 
+      or our practices with regards to your personal information, please contact us at info@dialogity.com.
+    <simple-paragraph>
+    </simple-paragraph> 
+      When you visit our website dialogity.com, and use our services, you trust us with your personal information. We take your privacy very seriously. 
+      In this privacy policy, we seek to explain to you in the clearest way possible what information we collect, how we use it and what rights you have 
+      in relation to it. We hope you take some time to read through it carefully, as it is important. If there are any terms in this privacy policy 
+      that you do not agree with, please discontinue use of our Sites and our services.
+    <simple-paragraph>
+    </simple-paragraph> 
+      This privacy policy applies to all information collected through our website (such as dialogity.com), and/or any related services, sales, 
+      marketing or events (we refer to them collectively in this privacy policy as the “Services”).
+    <simple-paragraph>
+    </simple-paragraph> 
+      Please read this privacy policy carefully as it will help you make informed decisions about sharing your personal information with us.
     </simple-paragraph>
-    <numbered-paragraph number="1" title="Definitions">
-      <ol type="a">
+
+    <numbered-paragraph number="1" title="WHAT INFORMATION DO WE COLLECT?">
+      <p>
+      Personal information you disclose to us In Short: We collect personal information that you provide to us such as name, address, 
+      contact information, passwords and security data, and payment information.
+      </p>
+      <p>
+      We collect personal information that you voluntarily provide to us when registering at the Services expressing an interest in 
+      obtaining information about us or our products and services, when participating in activities on the Services or otherwise contacting us.
+      </p>
+      <p>
+      The personal information that we collect depends on the context of your interactions with us and the Services, the choices you 
+      make and the products and features you use. The personal information we collect can include the following: 
+      </p>
+      <ul>
         <li>
-          "Activation link" means the link through which Customer may sign up and make payment in order to receive Services.
+          Publicly Available Personal Information. We collect email addresses; and other similar data.
         </li>
         <li>
-          "Customer Content" means content, data and information submitted to the Services by Customer or by a third party 
-          on behalf of or for the benefit of Customer, including Customer’s customers and prospective customers and visitors
-          to Customer’s website(s).
+          Credentials. We collect passwords, password hints, and similar security information used for authentication and account access. In case of password we only store encrypted version of the password.
         </li>
         <li>
-          "Documentation means Dialogity’s then-current generally available documentation, specifications, user manuals, etc. 
-          for the Services, which can be located at www.dialogity.com or such other URL as Dialogity may provide from time to time, 
-          as well as any documentation included in or attached to any Order Form or such other Services-related documents 
-          provided to Customer.
+          All personal information that you provide to us must be true, complete and accurate, and you must notify us of any changes to such personal information.
         </li>
         <li>
-          "Platform" means Dialogity’s proprietary, enterprise-level messaging platform.
+          Online Identifiers. We collect cookie identifiers, or others such as the ones used for analytics and marketing; and other similar data.
         </li>
-        <li>
-          "Services" means Dialogity’s products and/or services provided to Customer.
-        </li>
-        <li>
-          "Subscription Term" means the term for the Services set forth in the applicable Order Form or Activation Link.
-        </li>
-        <li>
-          "User" means an individual employee, consultant, contractor, or agent of Customer who has been authorized 
-          by Customer to use the Platform on behalf of Customer and its Affiliates.
-        </li>
-        <li>
-          "Personal Data" means any information relating to an identified or identifiable individual.
-        </li>
-        <li>
-          "Sensitive Personal Information" means Personal Data subject to specialized security regimes, including without 
-          limitation the Health Insurance Portability and Accountability Act (“HIPAA”), and the standards promulgated by 
-          the PCI Security Standards Council (“PCI”).
-        </li>
-      </ol>
+      </ul>
     </numbered-paragraph>
 
     <numbered-paragraph number="2" title="General Commercial Terms">

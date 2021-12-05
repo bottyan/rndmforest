@@ -2,19 +2,28 @@
   <div>
     <div id="menu-main" class="header">
       <div class="navbar">
+        
+        <div class="menu">
+          <div class="link-holder">
+            <!--div class="nav-item"><NuxtLink to="/">Home</NuxtLink></div-->
+            <div class="nav-item" @mouseover="mouseOver"><NuxtLink to="/live_chat" >Live Chat</NuxtLink></div>
+            <div class="nav-item"><NuxtLink to="/chat_automation">Chatbots</NuxtLink></div>
+            <div class="nav-item"><NuxtLink to="/ai_sales_assistant">AI Sales Assistant</NuxtLink></div>
+          </div>
+        </div>
+
         <div class="logo">
           <NuxtLink to="/">
             <img class="img" src="~/assets/images/logo_w_text_bw.png"/>
           </NuxtLink>
         </div>
-        <div class="menu">
-          <div class="link-holder">
-            <!--div class="nav-item"><NuxtLink to="/">Home</NuxtLink></div-->
-            <div class="nav-item"><NuxtLink to="/live_chat">Live Chat</NuxtLink></div>
-            <div class="nav-item"><NuxtLink to="/chat_automation">Chatbots</NuxtLink></div>
-            <div class="nav-item"><NuxtLink to="/ai_sales_assistant">AI Sales Assistant</NuxtLink></div>
-          </div>
+
+        <div class="buttons">
+          <div class="button"><a href="https://app.dialogity.com/login">Log In</a></div>
+          <div class="button"><a href="https://app.dialogity.com/registration">Sign Up Free</a></div>
         </div>
+
+
         <div class="hamburger" v-on:click="toggleMenu()">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -30,23 +39,23 @@
           <div class="footer-block">
             <div class="footer-item"><NuxtLink to="/terms_of_service">Pricing</NuxtLink></div>
             <div class="footer-item"><NuxtLink to="/terms_of_service">Terms of Service</NuxtLink></div>
-            <div class="footer-item"><NuxtLink to="/terms_of_service">Privacy Policy</NuxtLink></div>
+            <div class="footer-item"><NuxtLink to="/privacy_policy">Privacy Policy</NuxtLink></div>
           </div>
           <div class="footer-block">
-            <div class="footer-item"><NuxtLink to="/terms_of_service">Live chat</NuxtLink></div>
-            <div class="footer-item"><NuxtLink to="/terms_of_service">Chatbots</NuxtLink></div>
-            <div class="footer-item"><NuxtLink to="/terms_of_service">AI sales assistant</NuxtLink></div>
+            <div class="footer-item"><NuxtLink to="/live_chat">Live chat</NuxtLink></div>
+            <div class="footer-item"><NuxtLink to="/chat_automation">Chatbots</NuxtLink></div>
+            <div class="footer-item"><NuxtLink to="/ai_sales_assistant">AI sales assistant</NuxtLink></div>
           </div>
         </div>
         <div class="col col3">
           <div class="footer-block">
             <div class="footer-item"><a href="https://app.dialogity.com/login">Login</a></div>
             <div class="footer-item"><a href="https://app.dialogity.com/registration">Registration</a></div>
-            <div class="footer-item"><NuxtLink to="/terms_of_service">Documentation</NuxtLink></div>
+            <div class="footer-item"><a href="https://doc.dialogity.com/">Documentation</a></div>
           </div>
           <div class="footer-block">
             <div class="footer-item">Contact</div>
-            <div class="footer-item"><NuxtLink to="/terms_of_service">info@dialogity.com</NuxtLink></div>
+            <div class="footer-item"><a href="mailto:info@dialogity.com">info@dialogity.com</a></div>
           </div>
         </div>
         
@@ -58,15 +67,17 @@
 <style scoped lang="scss">
   .header {
     z-index: 100;
-    position: absolute;
+    position: fixed;
     width: 100%;
     padding-bottom: 1rem;
     background: 'rgba(0, 0, 0, 0.0)';
+    transition: background-color 600ms linear;
 
     .navbar {
-      max-width: calc(min(50rem,80%));
+      //max-width: calc(min(50rem,80%));
       margin: auto;
       display: flex;
+      align-items: center;
       justify-content: space-between;
       padding-top: 1.5rem;
       .logo {
@@ -90,6 +101,25 @@
           }
         }
       }
+      .buttons {
+        .button {
+          display: inline-block;
+          
+          a {
+            color: black;
+            text-decoration: none;
+            padding: 0.5rem;
+            border: 1px solid black;
+            //background-color: rgba(0, 0, 0, 0.2);
+            margin-right: 1rem;
+          }
+          a:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+          }
+        }
+        
+      }
       .hamburger {
         display: none;
         .bar {
@@ -103,6 +133,10 @@
         }
       }
       @media only screen and (max-width: 768px) {
+        .buttons {
+          display: none;
+        }
+
         .menu {
             position: fixed;
             left: -100%;
@@ -127,10 +161,20 @@
         }
       }
     }
+    @media only screen and (max-width: 768px) {
+      .navbar {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+  .header.scrolled {
+    background-color: #fff !important;
+    transition: background-color 600ms linear;
   }
   .footer {
     padding: 3rem;
-    padding-top: 6rem;
+    padding-top: 33vh;
     min-height: 20rem;
     background: rgba(255,255,255,0);
     position: relative;
@@ -175,7 +219,28 @@ export default {
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
       console.log("toggle");
+    },
+
+    handleScroll: function() {
+      var header = document.querySelector(".header");
+      if (window.scrollY > header.offsetHeight) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    },
+
+    mouseOver: function() {
+      this.toggleMenu();
+      console.log("over");
     }
+
+  },
+  beforeMount () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 }
 </script>
