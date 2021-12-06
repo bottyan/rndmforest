@@ -30,6 +30,8 @@
           <span class="bar"></span>
         </div>
       </div>
+      <div class="navpanel" @mouseleave="mouseLeave">
+      </div>
     </div>
     <Nuxt />
     <div class="footer">
@@ -80,6 +82,8 @@
       align-items: center;
       justify-content: space-between;
       padding-top: 1.5rem;
+      position: relative;
+      z-index: 20;
       .logo {
         //flex: 1 1 auto;
         .img {
@@ -161,6 +165,19 @@
         }
       }
     }
+    .navpanel {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      height: 100vh;
+      width: calc(min(20rem, 100%));
+      background: #ffffff;
+      transition: 0.3s;
+      z-index: 10;
+    }
+    .navpanel.active {
+      left: 0;
+    }
     @media only screen and (max-width: 768px) {
       .navbar {
         padding-left: 1rem;
@@ -216,8 +233,10 @@ export default {
     toggleMenu: function () {
       const hamburger = document.querySelector(".hamburger");
       const navMenu = document.querySelector(".menu");
+      const navPanel = document.querySelector(".navpanel");
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
+      navPanel.classList.toggle("active");
       console.log("toggle");
     },
 
@@ -231,9 +250,15 @@ export default {
     },
 
     mouseOver: function() {
-      this.toggleMenu();
+      const navPanel = document.querySelector(".navpanel");
+      navPanel.classList.add("active");
       console.log("over");
-    }
+    },
+
+    mouseLeave: function() {
+      const navPanel = document.querySelector(".navpanel");
+      navPanel.classList.remove("active");
+    },
 
   },
   beforeMount () {
