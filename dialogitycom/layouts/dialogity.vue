@@ -6,9 +6,9 @@
         <div class="menu">
           <div class="link-holder">
             <!--div class="nav-item"><NuxtLink to="/">Home</NuxtLink></div-->
-            <div class="nav-item" @mouseover="mouseOver"><NuxtLink to="/live_chat" >Live Chat</NuxtLink></div>
-            <div class="nav-item"><NuxtLink to="/chat_automation">Chatbots</NuxtLink></div>
-            <div class="nav-item"><NuxtLink to="/ai_sales_assistant">AI Sales Assistant</NuxtLink></div>
+            <div class="nav-item" @mouseover="mouseOver"><NuxtLink to="/">Products</NuxtLink></div>
+            <div class="nav-item"><NuxtLink to="/pricing">Pricing</NuxtLink></div>
+            <!--div class="nav-item"><NuxtLink to="/ai_sales_assistant">AI Sales Assistant</NuxtLink></div-->
           </div>
         </div>
 
@@ -31,6 +31,19 @@
         </div>
       </div>
       <div class="navpanel" @mouseleave="mouseLeave">
+        <div class="product-panel">
+          <div class="block">
+            <h2>Features</h2>
+            <div class="panel-item"><NuxtLink to="/live_chat" >Live chat</NuxtLink></div>
+            <div class="panel-item"><NuxtLink to="/chat_automation">Chatbots</NuxtLink></div>
+            <div class="panel-item"><NuxtLink to="/ai_sales_assistant">AI sales Assistant</NuxtLink></div>
+          </div>
+          <div class="block">
+            <h2>Documentation</h2>
+            <div class="panel-item"><NuxtLink to="/live_chat" >Integrations</NuxtLink></div>
+            <div class="panel-item"><NuxtLink to="/chat_automation">Documentation</NuxtLink></div>
+          </div>
+        </div>
       </div>
     </div>
     <Nuxt />
@@ -39,7 +52,7 @@
         <div class="col col1"></div>
         <div class="col col2">
           <div class="footer-block">
-            <div class="footer-item"><NuxtLink to="/terms_of_service">Pricing</NuxtLink></div>
+            <div class="footer-item"><NuxtLink to="/pricing">Pricing</NuxtLink></div>
             <div class="footer-item"><NuxtLink to="/terms_of_service">Terms of Service</NuxtLink></div>
             <div class="footer-item"><NuxtLink to="/privacy_policy">Privacy Policy</NuxtLink></div>
           </div>
@@ -174,6 +187,20 @@
       background: #ffffff;
       transition: 0.3s;
       z-index: 10;
+      .product-panel {
+        margin-top: 6rem;
+        .panel-item {
+          padding: 0.5rem 0 0.5rem 1rem;
+          a {
+            color: black;
+          }
+        }
+        .block {
+          h2 {
+            margin-left: 1rem;
+          }
+        }
+      }
     }
     .navpanel.active {
       left: 0;
