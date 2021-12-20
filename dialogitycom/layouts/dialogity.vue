@@ -32,16 +32,23 @@
       </div>
       <div class="navpanel" @mouseleave="mouseLeave">
         <div class="product-panel">
-          <div class="block">
+          <div class="menu-block">
             <h2>Features</h2>
             <div class="panel-item"><NuxtLink to="/live_chat" >Live chat</NuxtLink></div>
             <div class="panel-item"><NuxtLink to="/chat_automation">Chatbots</NuxtLink></div>
-            <div class="panel-item"><NuxtLink to="/ai_sales_assistant">AI sales Assistant</NuxtLink></div>
+            <div class="panel-item"><NuxtLink to="/ai_sales_assistant">AI sales assistant</NuxtLink></div>
           </div>
-          <div class="block">
+          <div class="menu-block">
             <h2>Documentation</h2>
             <div class="panel-item"><NuxtLink to="/live_chat" >Integrations</NuxtLink></div>
             <div class="panel-item"><NuxtLink to="/chat_automation">Documentation</NuxtLink></div>
+          </div>
+          <div class="menu-block mobile-menu-block">
+            <h2><NuxtLink to="/pricing" >Pricing</NuxtLink></h2>
+            <div class="buttons">
+              <div class="button"><a href="https://app.dialogity.com/login">Log In</a></div>
+              <div class="button"><a href="https://app.dialogity.com/registration">Sign Up Free</a></div>
+            </div>
           </div>
         </div>
       </div>
@@ -52,7 +59,7 @@
         <div class="col col1"></div>
         <div class="col col2">
           <div class="footer-block">
-            <div class="footer-item"><NuxtLink to="/pricing">Pricing</NuxtLink></div>
+            <div class="footer-item"><NuxtLink to="/pricing" v-on:click="menuClick()">Pricing</NuxtLink></div>
             <div class="footer-item"><NuxtLink to="/terms_of_service">Terms of Service</NuxtLink></div>
             <div class="footer-item"><NuxtLink to="/privacy_policy">Privacy Policy</NuxtLink></div>
           </div>
@@ -148,14 +155,15 @@
           transition: all 0.3s ease-in-out;
           background-color: #101010;
         }
-      }
+      }     
       @media only screen and (max-width: 768px) {
         .buttons {
           display: none;
         }
 
         .menu {
-            position: fixed;
+          display: none;
+            /*position: fixed;
             left: -100%;
             top: 5rem;
             flex-direction: column;
@@ -165,16 +173,20 @@
             text-align: center;
             transition: 0.3s;
             box-shadow:
-                0 10px 27px rgba(0, 0, 0, 0.05);
+                0 10px 27px rgba(0, 0, 0, 0.05);*/
         }
 
         .menu.active {
-          left: 0;
+          // left: 0;
         }
 
         .hamburger {
           display: block;
           cursor: pointer;
+        }
+
+        .mobile-block {
+          display: block;
         }
       }
     }
@@ -195,9 +207,38 @@
             color: black;
           }
         }
-        .block {
+        .menu-block {
           h2 {
             margin-left: 1rem;
+            a {
+              color: black;
+            }
+          }
+        }
+        .mobile-menu-block {
+          display: none;
+        }
+        @media only screen and (max-width: 768px) {
+          .mobile-menu-block {
+            display: block;
+          }
+          .buttons {
+            margin-top: 4rem;
+            .button {
+              margin: 2rem 0 2rem 1rem;
+              a {
+                color: black;
+                text-decoration: none;
+                padding: 0.5rem;
+                border: 1px solid black;
+                //background-color: rgba(0, 0, 0, 0.2);
+                margin-right: 1rem;
+              }
+              a:hover {
+                background-color: rgba(0, 0, 0, 0.7);
+                color: white;
+              }
+            }
           }
         }
       }
@@ -257,6 +298,10 @@
 export default {
   methods: {
 
+    menuClick: function() {
+      console.log("CLICK");
+    },
+
     toggleMenu: function () {
       const hamburger = document.querySelector(".hamburger");
       const navMenu = document.querySelector(".menu");
@@ -264,7 +309,7 @@ export default {
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
       navPanel.classList.toggle("active");
-      console.log("toggle");
+      //console.log("toggle");
     },
 
     handleScroll: function() {

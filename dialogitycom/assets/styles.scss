@@ -41,7 +41,10 @@ body {
   border: 0;
   padding: 0;
 }
-
+.max-width-wide {
+    max-width: calc(min(75rem,90%));
+    margin: auto;
+}
 .max-width {
     max-width: calc(min(50rem,80%));
     margin: auto;

@@ -17,7 +17,7 @@
 
 <style scoped lang="scss">
     .numbered-paragraph {
-        margin: 2rem 2rem 0 2rem;
+        margin: 2rem 2rem 0 0rem;
         max-width: 60rem;
 
 
