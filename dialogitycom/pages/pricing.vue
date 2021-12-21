@@ -19,9 +19,9 @@
             <div class="margin--vertical-c4" >
               <div class="pricingGrid__rowItem">
                 <a href="/pricing/premium-details/">
-                  <h2 class="h5 pricingPlans__header ">Live chat</h2>
+                  <h2 class="h5 pricingPlans__header ">Live Chat</h2>
                   <p class="copy margin--top-c4">
-                    Advanced features for pros who need more customization.
+                    Communicate with your customers for FREE.
                   </p>
                 </a>
               </div>
@@ -55,30 +55,30 @@
                   </div>
                 </div>
 
-                <div class="margin--bottom-c3">
+                <div class="cta-button">
                   
-                    Buy Now
+                    Sign Up Free
 
                 </div>
               </div>
             </div>
 
             <div class="margin--vertical-c4" >
-                Everything in Standard, plus:
+                Everything a small business need for live communication:
                 <ul class="pricingPlans__featuresRow__list">
-                    <li class="margin--bottom-c4">
+                    <li class="feature-list-item">
                         <span class="tooltip" >
-                            <span class="tooltip__originalText" tabindex="0" >Advanced Segmentation</span >
+                            <span class="tooltip__originalText" tabindex="0" >No limitation in number of customers or agents</span >
                         </span>
                     </li>
-                    <li class="margin--bottom-c4">
+                    <li class="feature-list-item">
                         <span class="tooltip" >
-                            <span class="tooltip__originalText" tabindex="0" >Advanced Segmentation</span >
+                            <span class="tooltip__originalText" tabindex="0" >Customization</span >
                         </span>
                     </li>
-                    <li class="margin--bottom-c4">
+                    <li class="feature-list-item">
                         <span class="tooltip" >
-                            <span class="tooltip__originalText" tabindex="0" >Advanced Segmentation</span >
+                            <span class="tooltip__originalText" tabindex="0" >Gmail integration</span >
                         </span>
                     </li>
                     
@@ -86,9 +86,9 @@
             </div>
 
             <div>
-              <a class="cta" href="/pricing/premium-details/" >
-                About Premium
-              </a>
+              <NuxtLink class="cta" to="/live_chat" >
+                About Live Chat
+              </NuxtLink>
             </div>
           </div>
 
@@ -98,7 +98,7 @@
                 <a href="/pricing/premium-details/">
                   <h2 class="h5 pricingPlans__header ">Chatbots</h2>
                   <p class="copy margin--top-c4">
-                    Advanced features for pros who need more customization.
+                    Decrease response time and increase conversion rate by automation.
                   </p>
                 </a>
               </div>
@@ -132,7 +132,7 @@
                   </div>
                 </div>
 
-                <div class="margin--bottom-c3">
+                <div class="cta-button">
                   
                     Buy Now
 
@@ -143,17 +143,17 @@
             <div class="margin--vertical-c4" >
                 Everything in Standard, plus:
                 <ul class="pricingPlans__featuresRow__list">
-                    <li class="margin--bottom-c4">
+                    <li class="feature-list-item">
                         <span class="tooltip" >
                             <span class="tooltip__originalText" tabindex="0" >Advanced Segmentation</span >
                         </span>
                     </li>
-                    <li class="margin--bottom-c4">
+                    <li class="feature-list-item">
                         <span class="tooltip" >
                             <span class="tooltip__originalText" tabindex="0" >Advanced Segmentation</span >
                         </span>
                     </li>
-                    <li class="margin--bottom-c4">
+                    <li class="feature-list-item">
                         <span class="tooltip" >
                             <span class="tooltip__originalText" tabindex="0" >Advanced Segmentation</span >
                         </span>
@@ -163,9 +163,9 @@
             </div>
 
             <div>
-              <a class="cta" href="/pricing/premium-details/" >
-                About Premium
-              </a>
+              <NuxtLink class="cta" to="/chat_automation/" >
+                About Chatbots
+              </NuxtLink>
             </div>
           </div>
 
@@ -173,7 +173,7 @@
             <div class="margin--vertical-c4" >
               <div class="pricingGrid__rowItem">
                 <a href="/pricing/premium-details/">
-                  <h2 class="h5 pricingPlans__header ">AI sales assistant</h2>
+                  <h2 class="h5 pricingPlans__header ">AI Sales Assistant</h2>
                   <p class="copy margin--top-c4">
                     Advanced features for pros who need more customization.
                   </p>
@@ -209,7 +209,7 @@
                   </div>
                 </div>
 
-                <div class="margin--bottom-c3">
+                <div class="cta-button">
                   
                     Buy Now
 
@@ -220,17 +220,17 @@
             <div class="margin--vertical-c4" >
                 Everything in Standard, plus:
                 <ul class="pricingPlans__featuresRow__list">
-                    <li class="margin--bottom-c4">
+                    <li class="feature-list-item">
                         <span class="tooltip" >
                             <span class="tooltip__originalText" tabindex="0" >Advanced Segmentation</span >
                         </span>
                     </li>
-                    <li class="margin--bottom-c4">
+                    <li class="feature-list-item">
                         <span class="tooltip" >
                             <span class="tooltip__originalText" tabindex="0" >Advanced Segmentation</span >
                         </span>
                     </li>
-                    <li class="margin--bottom-c4">
+                    <li class="feature-list-item">
                         <span class="tooltip" >
                             <span class="tooltip__originalText" tabindex="0" >Advanced Segmentation</span >
                         </span>
@@ -240,9 +240,9 @@
             </div>
 
             <div>
-              <a class="cta" href="/pricing/premium-details/" >
-                About Premium
-              </a>
+              <NuxtLink class="cta" to="/ai_sales_assistant/" >
+                About AI Sales Assistant
+              </NuxtLink>
             </div>
           </div>
 
@@ -288,6 +288,7 @@ export default {
     }
     gap: 1rem;
     .pricingPlans__planCard {
+        flex: 1;
         background: rgba(255, 255, 255, 0.2);
         padding: 2.5rem;
         border: 1px solid black;
@@ -326,7 +327,7 @@ export default {
                         margin-left: 0.75rem;
                     }
                 }
-                .margin--bottom-c3 {
+                .cta-button {
                     margin-top: 2rem;
                     margin-bottom: 2rem;
                     width: calc(100%);
@@ -337,18 +338,29 @@ export default {
                     text-align: center;
 
                     cursor: pointer;
-                }    
-                .margin--bottom-c3:hover {
+
                     background-color: rgba(0, 0, 0, 0.7);
                     color: white;
+                }    
+                .cta-button:hover {
+                    background-color: transparent;
+                    color: black;
                 }
             }
             .pricingPlans__featuresRow__list {
                 list-style: none;
                 li:before {
                     content: '✓';
+                    margin-left: -1.2rem;
+                    margin-right: 0.4rem;
+                }
+                .feature-list-item {
+                    margin-bottom: 0.3rem;
                 }
             }
+        }
+        .cta {
+            color: black;
         }
     }
 }
