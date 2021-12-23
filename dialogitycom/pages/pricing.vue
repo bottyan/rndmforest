@@ -63,8 +63,8 @@
               </div>
             </div>
 
-            <div class="margin--vertical-c4" >
-                Everything a small business need for live communication:
+            <div class="margin--vertical-c4 features" >
+                Everything a small business need for real-time communication:
                 <ul class="pricingPlans__featuresRow__list">
                     <li class="feature-list-item">
                         <span class="tooltip" >
@@ -134,28 +134,28 @@
 
                 <div class="cta-button">
                   
-                    Buy Now
+                    Register for Beta Test
 
                 </div>
               </div>
             </div>
 
-            <div class="margin--vertical-c4" >
-                Everything in Standard, plus:
+            <div class="margin--vertical-c4 features" >
+                Everything in Live Chat, plus:
                 <ul class="pricingPlans__featuresRow__list">
                     <li class="feature-list-item">
                         <span class="tooltip" >
-                            <span class="tooltip__originalText" tabindex="0" >Advanced Segmentation</span >
+                            <span class="tooltip__originalText" tabindex="0" >Automated conversations</span >
                         </span>
                     </li>
                     <li class="feature-list-item">
                         <span class="tooltip" >
-                            <span class="tooltip__originalText" tabindex="0" >Advanced Segmentation</span >
+                            <span class="tooltip__originalText" tabindex="0" >Decreased response times</span >
                         </span>
                     </li>
                     <li class="feature-list-item">
                         <span class="tooltip" >
-                            <span class="tooltip__originalText" tabindex="0" >Advanced Segmentation</span >
+                            <span class="tooltip__originalText" tabindex="0" >Increased conversion rate</span >
                         </span>
                     </li>
                     
@@ -169,13 +169,13 @@
             </div>
           </div>
 
-                    <div class="pricingPlans__planCard">
+        <div class="pricingPlans__planCard">
             <div class="margin--vertical-c4" >
               <div class="pricingGrid__rowItem">
                 <a href="/pricing/premium-details/">
                   <h2 class="h5 pricingPlans__header ">AI Sales Assistant</h2>
                   <p class="copy margin--top-c4">
-                    Advanced features for pros who need more customization.
+                    Extend your team with AI
                   </p>
                 </a>
               </div>
@@ -191,48 +191,48 @@
                   <div class="flex flex--bottom" aria-hidden="true">
                     <div class="formattedPrice flex flex--left" >
                       <div class="formattedPrice__price--symbol--left" >
-                        $
+                        
                       </div>
                       <div class="formattedPrice__price--integer" >
-                        9
+                        Contact us
                       </div>
-                      <div class="formattedPrice__price--fraction" >.99</div>
+                      <div class="formattedPrice__price--fraction" ></div>
                       <div class="formattedPrice__price--symbol--right" ></div>
                       <div class=" formattedPrice__disclaimerAsterisk formattedPrice__hide " >
                         <!-- * -->
                       </div>
                     </div>
 
-                    <div class="copy-regular pricingPlans--compare__perMonth" >
-                      /month
+                    <div class="copy-regular pricingPlans--compare__perMonth transparent" >
+                      .
                     </div>
                   </div>
                 </div>
 
                 <div class="cta-button">
                   
-                    Buy Now
+                    Register for Beta Test
 
                 </div>
               </div>
             </div>
 
-            <div class="margin--vertical-c4" >
-                Everything in Standard, plus:
+            <div class="margin--vertical-c4 features" >
+                Everything in Chatbots, plus:
                 <ul class="pricingPlans__featuresRow__list">
                     <li class="feature-list-item">
                         <span class="tooltip" >
-                            <span class="tooltip__originalText" tabindex="0" >Advanced Segmentation</span >
+                            <span class="tooltip__originalText" tabindex="0" >Meaningful conversation automated</span >
                         </span>
                     </li>
                     <li class="feature-list-item">
                         <span class="tooltip" >
-                            <span class="tooltip__originalText" tabindex="0" >Advanced Segmentation</span >
+                            <span class="tooltip__originalText" tabindex="0" >Machine learning based dialog flow building</span >
                         </span>
                     </li>
                     <li class="feature-list-item">
                         <span class="tooltip" >
-                            <span class="tooltip__originalText" tabindex="0" >Advanced Segmentation</span >
+                            <span class="tooltip__originalText" tabindex="0" >Managing complex conversations automatically</span >
                         </span>
                     </li>
                     
@@ -302,6 +302,9 @@ export default {
                     font-family: 'Gotham-Black', 'Roboto', sans-serif;
                     font-size: 2rem;//calc(min(3rem,min(100vh/15,100vw/22)));
                 }
+                .copy {
+                    min-height: 2.7em;
+                }
                 .pricingPlans__priceWrapper {
                     .formattedPrice {
                         display: flex;
@@ -325,6 +328,9 @@ export default {
                     .pricingPlans--compare__perMonth {
                         font-size: 0.75rem; 
                         margin-left: 0.75rem;
+                    }
+                    .transparent {
+                        color: rgba(0, 0, 0, 0.0);
                     }
                 }
                 .cta-button {
@@ -361,6 +367,12 @@ export default {
         }
         .cta {
             color: black;
+        }
+        .features {
+            min-height: 11em;
+            @media only screen and (max-width: 1100px) {
+                min-height: 0em;
+            }
         }
     }
 }
