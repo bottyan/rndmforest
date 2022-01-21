@@ -55,10 +55,10 @@
                   </div>
                 </div>
 
-                <div class="cta-button">
+                <div class="cta-button" @click="goToRegistration()">
                   
                     Sign Up Free
-
+                  
                 </div>
               </div>
             </div>
@@ -269,6 +269,7 @@ export default {
 
   mounted() {
     this.animateOnScroll();
+    this.$hello("world");
   },
 
   beforeDestroy() {
@@ -284,6 +285,9 @@ export default {
       const bg = document.querySelector(".bg");
       const tohide = document.querySelector("#hide");
     },
+    goToRegistration() {
+      window.location.href = "https://app.dialogity.com/registration";
+    }
   },
 };
 </script>
