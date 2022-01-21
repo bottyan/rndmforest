@@ -254,8 +254,9 @@
     }
   }
   .header.scrolled {
-    background-color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
     transition: background-color 600ms linear;
+    backdrop-filter: blur(3px);
   }
   .footer {
     padding: 3rem;
