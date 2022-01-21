@@ -132,7 +132,7 @@
                   </div>
                 </div>
 
-                <div class="cta-button">
+                <div class="cta-button" @click="showModal = true">
                   
                     Register for Beta Test
 
@@ -209,7 +209,7 @@
                   </div>
                 </div>
 
-                <div class="cta-button">
+                <div class="cta-button" @click="showModal = true">
                   
                     Register for Beta Test
 
@@ -250,15 +250,23 @@
         </div>
       </div>
     </div>
+    <FormModal v-show="showModal" @close-modal="showModal = false" />
   </div>
 </template>
 
 <script>
 import NumberedParagraph from "../components/NumberedParagraph.vue";
-import SimpleParagraph from "../components/SimpleParagraph.vue";
+import FormModal from "../components/FormModal.vue";
 export default {
-  components: { NumberedParagraph },
+  components: { NumberedParagraph, FormModal },
   layout: "dialogity",
+  
+  data() {
+    return {
+      showModal: false,
+    }
+  },
+
   mounted() {
     this.animateOnScroll();
   },
