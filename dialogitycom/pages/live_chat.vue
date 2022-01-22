@@ -27,6 +27,70 @@
         </div>
       </div>
     </div>
+
+
+    <div class="section section4">
+      <div class="anim-holder">
+        <div class="anim-frame"> 
+          <div class="demo_holder max2-width">
+            <div class="frame_title">
+              <div class="text-inner">Answer quickly and easily</div>
+            </div>
+
+            <div class="multi-frame">
+
+              <div class="demo_frame frame1 maxh2-width">
+                <div class="image_holder">
+                  <div class="text-holder">
+                    <div class="dt1 text-center text-def font-hand-M">
+                      <div class="text-inner">Select logo and color 🎨</div>
+                    </div>
+                    <div class="dt2 text-center text-def font-hand-M">
+                      <div class="text-inner">Write welcome message.</div>
+                    </div>
+                    <!--div class="custom3 text-center text-def font-hand-M">
+                      <div class="text-inner">Edit the sites code or use a tag manager.</div>
+                    </div-->
+                  </div>
+                  <img class="imgc1" src="~/assets/images/demo_live_chat/12 on site with welcome message - s.webp"/>
+                  <img class="imgc2 imgb" src="~/assets/images/demo_live_chat/13 on site empty box - s.webp"/>
+                  <img class="imgc3 imgb" src="~/assets/images/demo_live_chat/14 hi notification s.webp"/>
+                  <img class="imgc4 imgb" src="~/assets/images/demo_live_chat/14 answer received s.webp"/>
+
+                  <!--img class="imgc5 imgb" src="~/assets/images/demo_live_chat/09 welcome popup.webp"/>
+                  <img class="imgc6" src="~/assets/images/demo_live_chat/14 hi notification c.webp"/>
+                  <!img class="imgb6 imgb" src="~/assets/images/demo_live_chat/04.webp"/-->
+
+                </div>
+              </div>
+              <div class="demo_frame frame2 maxh2-width">
+                <div class="image_holder">
+                  <div class="text-holder">
+                    <div class="dat1 text-center text-def font-hand-M">
+                      <div class="text-inner">🦸‍♀️ Agent is ready to answer questsion.</div>
+                    </div>
+                    <div class="dat2 text-center text-def font-hand-M">
+                      <div class="text-inner">And she can do it immediately in the dynamic notification email.</div>
+                    </div>
+                    <!--div class="custom3 text-center text-def font-hand-M">
+                      <div class="text-inner">Edit the sites code or use a tag manager.</div>
+                    </div-->
+                  </div>
+                  <img class="imgca1" src="~/assets/images/demo_live_chat/17 email noti s.webp"/>
+                  <img class="imgca2 imgb" src="~/assets/images/demo_live_chat/18 answer from email sent s.webp"/>
+                  
+                  
+                  <!--img class="imgb6 imgb" src="~/assets/images/demo_live_chat/04.webp"/-->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <div class="section section2">
       <div class="anim-holder">
         <div class="anim-frame">
@@ -97,68 +161,6 @@
       </div>
     </div>
 
-    <div class="section section4">
-      <div class="anim-holder">
-        <div class="anim-frame"> 
-          <div class="demo_holder max2-width">
-            <div class="frame_title">
-              <div class="text-inner">Answer quickly and easily</div>
-            </div>
-
-            <div class="multi-frame">
-
-              <div class="demo_frame frame1 maxh2-width">
-                <div class="image_holder">
-                  <div class="text-holder">
-                    <div class="dt1 text-center text-def font-hand-M">
-                      <div class="text-inner">Select logo and color 🎨</div>
-                    </div>
-                    <div class="dt2 text-center text-def font-hand-M">
-                      <div class="text-inner">Write welcome message.</div>
-                    </div>
-                    <!--div class="custom3 text-center text-def font-hand-M">
-                      <div class="text-inner">Edit the sites code or use a tag manager.</div>
-                    </div-->
-                  </div>
-                  <img class="imgc1" src="~/assets/images/demo_live_chat/12 on site with welcome message - s.webp"/>
-                  <img class="imgc2 imgb" src="~/assets/images/demo_live_chat/13 on site empty box - s.webp"/>
-                  <img class="imgc3 imgb" src="~/assets/images/demo_live_chat/14 hi notification s.webp"/>
-                  <img class="imgc4 imgb" src="~/assets/images/demo_live_chat/14 answer received s.webp"/>
-
-                  <!--img class="imgc5 imgb" src="~/assets/images/demo_live_chat/09 welcome popup.webp"/>
-                  <img class="imgc6" src="~/assets/images/demo_live_chat/14 hi notification c.webp"/>
-                  <!img class="imgb6 imgb" src="~/assets/images/demo_live_chat/04.webp"/-->
-
-                </div>
-              </div>
-              <div class="demo_frame frame2 maxh2-width">
-                <div class="image_holder">
-                  <div class="text-holder">
-                    <div class="dat1 text-center text-def font-hand-M">
-                      <div class="text-inner">🦸‍♀️ Agent is ready to answer questsion.</div>
-                    </div>
-                    <div class="dat2 text-center text-def font-hand-M">
-                      <div class="text-inner">And she can do it immediately in the dynamic notification email.</div>
-                    </div>
-                    <!--div class="custom3 text-center text-def font-hand-M">
-                      <div class="text-inner">Edit the sites code or use a tag manager.</div>
-                    </div-->
-                  </div>
-                  <img class="imgca1" src="~/assets/images/demo_live_chat/17 email noti s.webp"/>
-                  <img class="imgca2 imgb" src="~/assets/images/demo_live_chat/18 answer from email sent s.webp"/>
-                  
-                  
-                  <!--img class="imgb6 imgb" src="~/assets/images/demo_live_chat/04.webp"/-->
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
 
   </div>
 </template>

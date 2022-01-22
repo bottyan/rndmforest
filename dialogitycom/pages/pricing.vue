@@ -132,7 +132,7 @@
                   </div>
                 </div>
 
-                <div class="cta-button" @click="showModal = true">
+                <div class="cta-button" @click="formId = 'Chatbot_registration'; showModal = true">
                   
                     Register for Beta Test
 
@@ -209,7 +209,7 @@
                   </div>
                 </div>
 
-                <div class="cta-button" @click="showModal = true">
+                <div class="cta-button" @click="formId = 'AI_sales_agent_registration'; showModal = true">
                   
                     Register for Beta Test
 
@@ -250,7 +250,7 @@
         </div>
       </div>
     </div>
-    <FormModal v-show="showModal" @close-modal="showModal = false" />
+    <FormModal v-show="showModal" @close-modal="showModal = false" :formId="this.formId"/>
   </div>
 </template>
 
@@ -264,12 +264,12 @@ export default {
   data() {
     return {
       showModal: false,
+      formId: "default",
     }
   },
 
   mounted() {
     this.animateOnScroll();
-    this.$hello("world");
   },
 
   beforeDestroy() {

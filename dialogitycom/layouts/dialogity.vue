@@ -38,11 +38,11 @@
             <div class="panel-item"><NuxtLink to="/chat_automation">Chatbots</NuxtLink></div>
             <div class="panel-item"><NuxtLink to="/ai_sales_assistant">AI sales assistant</NuxtLink></div>
           </div>
-          <div class="menu-block">
+          <!--div class="menu-block">
             <h2>Documentation</h2>
             <div class="panel-item"><NuxtLink to="/live_chat" >Integrations</NuxtLink></div>
             <div class="panel-item"><a href="https://doc.dialogity.com/">Documentation</a></div>
-          </div>
+          </div-->
           <div class="menu-block mobile-menu-block">
             <h2><NuxtLink to="/pricing" >Pricing</NuxtLink></h2>
             <div class="buttons">
