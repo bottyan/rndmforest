@@ -1,9 +1,9 @@
 <template>
   <div>
 
-    <div class="chat-block max-width headspace" ref="containeToScroll">
-      <div id="content" class="content messages">
-        <div class="messages-content">
+    <div class="chat-block max-width headspace" ref="containerToScroll">
+      <div id="content" class="content messages" ref="containerContent">
+        <div class="messages-content" >
           <div class="msg-line" v-for="msg in messages" :key="msg.id">
             <div v-if="!msg.floating">
               <div class="msg-user-resp message message-personal" v-if="msg.type == 2 && msg.body.option">
@@ -197,18 +197,25 @@ export default {
       return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
     },
     scrollToTheEnd: function() {
+      // TODO fix scroll out first messages
       this.$nextTick(() => {
-        const content = this.$refs.containeToScroll;
-        const contentHeight = content.clientHeight;
+        const content = this.$refs.containerToScroll;
+        const innerContent = this.$refs.containerContent;
+        const contentHeight = innerContent.clientHeight;
+        //const contentHeight = content.clientHeight;
         //const windowHeight = window.innerHeight;
         const bottomPos = this.$refs.inputHolder.getBoundingClientRect().top;
+        const headSpace = this.convertRemToPixels(6);
         console.log("SCROLL", contentHeight, bottomPos)
-        if (contentHeight > bottomPos) {
-          const scrollTo = Math.max(0, contentHeight - bottomPos);
+        if (contentHeight + headSpace > bottomPos) {
+          const scrollTo = Math.max(0, contentHeight + headSpace - bottomPos);
           console.log("scroll to:", scrollTo);
           window.scrollTo(0, scrollTo);
         } 
       });
+    },
+    convertRemToPixels: function(rem) {    
+      return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
     },
     gsapInit: function() {
       // https://greensock.com/forums/topic/24446-scrolltrigger-possible-to-stick-to-bottom-of-viewport-untill-its-ghost-appears-like-simulating-position-sticky/

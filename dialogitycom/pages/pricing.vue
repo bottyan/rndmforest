@@ -134,7 +134,7 @@
 
                 <div class="cta-button" @click="formId = 'Chatbot_registration'; showModal = true">
                   
-                    Register for Beta Test
+                    Register for FREE Beta Test
 
                 </div>
               </div>

@@ -84,7 +84,6 @@
 </template>
 
 <script>
-// TODO: mobile menu
 
 export default {
   layout: 'dialogity',
