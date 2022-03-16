@@ -31,6 +31,10 @@
       <div class="max-width">
         <div class="input-box">
           <div v-if="floatingMessage">
+            <div class='choice-form' v-if="floatingMessage['body']['type']=='form'">
+              <div class='option-title'>{{floatingMessage['body']['text']}}</div>
+              <input id="freeTextInput" type="text" v-on:keyup.enter="onEnterAnswer" autocomplete="off"/>
+            </div>
             <div class='choice-form' v-if="floatingMessage['body']['type']=='choice'">
               <div class='option-title'>Select an option 👇</div>
               <div class='option' v-for="option in floatingMessage['body']['options']" :key="option.id">
@@ -38,14 +42,18 @@
               </div>
             </div>
           </div>
-          <div v-if="!floatingMessage || floatingMessage['body']['type'] !== 'choice'">
-            <input id="freeTextInput" type="text" v-on:keyup.enter="onEnter"/>
+          <div v-if="!floatingMessage || (floatingMessage['body']['type'] !== 'choice' && floatingMessage['body']['type'] !== 'form')">
+            <input id="freeTextInput" type="text" v-on:keyup.enter="onEnter" autocomplete="off"/>
           </div>
         </div>
       </div>
     </div>
 
     <div class="footer">
+    </div>
+
+    <div v-on:click="reset()">
+      Reset
     </div>
 
   </div>
@@ -79,7 +87,6 @@ export default {
   mounted() {
     this.gsapInit();
     // TODO: implement recommenct in case of error
-
     console.log("Starting connection to WebSocket Server");
     const uuid = "d09fbd61d20c42de9023c7a8f2b0154e"; // prod
     //const uuid = "aa8a9a6a66bb76976a9876"; // local
@@ -88,40 +95,9 @@ export default {
       cid = this.dlgty_chb_guidGenerator();
       Cookie.set("wtid", cid);
     }
-    this.connection = new WebSocket("wss://api2.dialogity.com/ws/chat"); // prod
-    //this.connection = new WebSocket("ws://localhost:8000/ws/chat"); // local
-    const _conn = this.connection;
-    const _this = this;
-
-    this.connection.onmessage = function(event) {
-      console.log("Message received:", event);
-      const data = JSON.parse(event.data);
-      if (data.command === "messages") {
-        console.log("Messages fetched:", data.messages);
-        _this.setMessages(data.messages);
-      } else if (data.command === "new_message") {
-        _this.addMessage(data.message);
-      } else if (data.command === "update_message") {
-        _this.updateMessage(data.message);
-      }
-    }
-
-    this.connection.onopen = function(event) {
-      console.log(event);
-      console.log("Successfully connected to the websocket server...");
-      // TODO: fetch messages
-      _conn.send(JSON.stringify({
-        command: 'fetch_messages', uuid: uuid, cid: cid, url: "chatbot"
-      }));
-    }
-
-    this.connection.onclose = function(event) {
-      console.log('Socket is closed. Reconnect will be attempted in 1 ms.', e.reason);
-      setTimeout(function() { connect(); }, 1);
-    };
-
     this.cid = cid;
     this.uuid = uuid;
+    this.initDialog();
   },
 
   beforeDestroy() {
@@ -129,6 +105,50 @@ export default {
   },
 
   methods: {
+    initDialog: function() {
+      let cid = this.cid;
+      let uuid = this.uuid;
+      this.connection = new WebSocket("wss://api2.dialogity.com/ws/chat"); // prod
+      //this.connection = new WebSocket("ws://localhost:8000/ws/chat"); // local
+      const _conn = this.connection;
+      const _this = this;
+
+      this.connection.onmessage = function(event) {
+        console.log("Message received:", event);
+        const data = JSON.parse(event.data);
+        if (data.command === "messages") {
+          console.log("Messages fetched:", data.messages);
+          _this.setMessages(data.messages);
+        } else if (data.command === "new_message") {
+          _this.addMessage(data.message);
+        } else if (data.command === "update_message") {
+          _this.updateMessage(data.message);
+        }
+      }
+
+      this.connection.onopen = function(event) {
+        console.log(event);
+        console.log("Successfully connected to the websocket server...");
+        // TODO: fetch messages
+        _conn.send(JSON.stringify({
+          command: 'fetch_messages', uuid: uuid, cid: cid, url: "chatbot"
+        }));
+      }
+
+      //const _connection = this.connection;
+      this.connection.onclose = function(event) {
+        console.log('Socket is closed. Reconnect will be attempted in 1 ms.', event.reason);
+        setTimeout(function() { console.log("TRY TO RECONNECT?"); }, 1);
+      };
+    },
+    reset: function() {
+      this.messages = [];
+      this.floatingMessage = null;
+      this.connection.close();
+      let cid = this.dlgty_chb_guidGenerator();
+      Cookie.set("wtid", cid);
+      this.cid = cid;
+    },
     sendMsg: function(message) {
       // TODO: sending a message
     },
@@ -143,7 +163,17 @@ export default {
       console.log("On Enter:", msg);
       e.target.value = "";
       this.connection.send(JSON.stringify({
-        command: 'new_message', message: msg, type: 1, cid: this.cid, uuid: this.uuid, lang: 'ENG', is_html: 0, uuid: this.uuid, cid: this.cid, url: "chatbot"
+        command: 'new_message', message: msg, type: 1, cid: this.cid, uuid: this.uuid, lang: 'ENG', is_html: 0, url: "chatbot"
+      }));
+    },
+    onEnterAnswer: function(e) {
+      let msg =  {};
+      msg['value'] = e.target.value;
+      console.log("On Enter:", msg);
+      e.target.value = "";
+      let qid = parseInt(this.floatingMessage.id);
+      this.connection.send(JSON.stringify({
+        command: 'new_answer', message: msg, type: 1, 'system_message': 2, cid: this.cid, uuid: this.uuid, 'qid': qid, lang: 'ENG', is_html: 0, url: "chatbot"
       }));
     },
     setMessages: function(msgs) {
