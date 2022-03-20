@@ -184,11 +184,13 @@ export default {
     setMessages: function(msgs) {
       console.log("MESSAGES");
       this.messages = msgs;
+      // TODO: increase size gradually
       this.getFloatingMessage();
       this.scrollToTheEnd();
     },
     addMessage: function(msg) {
       this.messages.push(msg);
+      // TODO: increase size gradually
       this.getFloatingMessage();
       this.scrollToTheEnd();
     },
@@ -312,7 +314,8 @@ export default {
         width: calc(100% - 8px);
         border: 0px solid black;
         border-bottom: 1px solid black;
-        font-size: 1.5rem;
+        font-size: 1rem;
+        margin-top: 0.6rem;
       }
 
       .choice-form {
@@ -368,8 +371,8 @@ Messages
     // background: rgba(0, 0, 0, .3);
     background: linear-gradient(120deg, rgba(0,160,176,0.3) 0%, rgba(245,223,77,0.3) 100%);
     margin: 8px 0;
-    font-size: 1.5rem;
-    line-height: 1.2em;
+    font-size: 1rem;
+    line-height: 1em;
     margin-right: 1.5rem;
     position: relative;
     //text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
