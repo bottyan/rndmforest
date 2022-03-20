@@ -12,6 +12,9 @@
               <div class="msg-user message message-personal" v-if="msg.type == 1 && msg.system_message == 0">
                 {{msg.body_str}}
               </div>
+              <div class="msg-user message message-personal" v-if="msg.type == 1 && msg.system_message == 2 && msg.body.value">
+                {{msg.body.value}}
+              </div>
               <div class="msg-bot message" v-if="msg.type == 0 || (msg.type == 2 && msg.system_message == 0)">
                 <div v-if="msg.is_html == 0">
                   {{msg.body}}
@@ -120,6 +123,8 @@ export default {
           console.log("Messages fetched:", data.messages);
           _this.setMessages(data.messages);
         } else if (data.command === "new_message") {
+          _this.addMessage(data.message);
+        } else if (data.command === "new_answer") {
           _this.addMessage(data.message);
         } else if (data.command === "update_message") {
           _this.updateMessage(data.message);
@@ -307,6 +312,7 @@ export default {
         width: calc(100% - 8px);
         border: 0px solid black;
         border-bottom: 1px solid black;
+        font-size: 1.5rem;
       }
 
       .choice-form {
@@ -364,7 +370,7 @@ Messages
     margin: 8px 0;
     font-size: 1.5rem;
     line-height: 1.2em;
-    margin-left: 35px;
+    margin-right: 1.5rem;
     position: relative;
     //text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
     
@@ -410,6 +416,8 @@ Messages
       text-align: right;
       background: linear-gradient(120deg, #248A52, #257287);
       border-radius: 10px 10px 0 10px;
+      margin-right: 0rem;
+      margin-left: 1.5rem;
       
       &::before {
         left: auto;
