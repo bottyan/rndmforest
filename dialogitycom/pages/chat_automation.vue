@@ -4,7 +4,7 @@
     <div class="chat-block max-width headspace" ref="containerToScroll">
       <div id="content" class="content messages" ref="containerContent">
         <div class="messages-content" >
-          <div class="msg-line" v-for="msg in messages" :key="msg.id">
+          <div class="msg-line" v-for="msg in messagesToShow" :key="msg.id">
             <div v-if="!msg.floating">
               <div class="msg-user-resp message message-personal" v-if="msg.type == 2 && msg.body.option">
                 {{getSelectedMessage(msg.body.options, msg.body.option)}}
@@ -84,6 +84,8 @@ export default {
       uuid: null,
       cid: null,
       messages: [],
+      messagesToShow: [],
+      adding: false,
     }
   },
 
@@ -145,6 +147,13 @@ export default {
         console.log('Socket is closed. Reconnect will be attempted in 1 ms.', event.reason);
         setTimeout(function() { console.log("TRY TO RECONNECT?"); }, 1);
       };
+
+      this.constantCheck();
+    }, 
+    constantCheck: function() {
+      const _this = this;
+      _this.addMessageIfExists();
+      setTimeout(() => _this.constantCheck(), 200);
     },
     reset: function() {
       this.messages = [];
@@ -184,15 +193,33 @@ export default {
     setMessages: function(msgs) {
       console.log("MESSAGES");
       this.messages = msgs;
-      // TODO: increase size gradually
+      this.messagesToShow = this.messages.map((x) => x);;
       this.getFloatingMessage();
       this.scrollToTheEnd();
     },
     addMessage: function(msg) {
       this.messages.push(msg);
-      // TODO: increase size gradually
       this.getFloatingMessage();
       this.scrollToTheEnd();
+    },
+    addMessageIfExists: function() {
+      if (!this.adding) {
+        if (this.messages.length > this.messagesToShow.length) {
+          this.adding = true;
+          var newMessage = this.messages[this.messagesToShow.length];
+          var waitTime = 10;
+          if (newMessage.body_str) {
+            waitTime = 40 * newMessage.body_str.length;
+            console.log("Wait for: ", waitTime);
+          }
+          const _this = this;
+          setTimeout(() => {
+            _this.messagesToShow.push(newMessage);
+            _this.adding = false;
+            _this.scrollToTheEnd();
+          }, waitTime);
+        }
+      }
     },
     updateMessage: function(msg) {
       if (this.messages) {
