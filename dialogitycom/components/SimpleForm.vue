@@ -90,7 +90,7 @@ export default {
     background-color: white;
     //min-height: 25vh;
     max-height: 90vh;
-    width: 100%;
+    //width: 100%;
     padding: 2rem;
     position: relative;
     border-radius: 2rem;

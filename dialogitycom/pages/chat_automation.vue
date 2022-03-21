@@ -25,6 +25,17 @@
               </div>
             </div>
           </div>
+            <div class="msg-line" v-if="adding">
+              <div class="msg-bot message">
+                <div class="ticontainer">
+                  <div class="tiblock">
+                    <div class="tidot"></div>
+                    <div class="tidot"></div>
+                    <div class="tidot"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
       
@@ -157,6 +168,7 @@ export default {
     },
     reset: function() {
       this.messages = [];
+      this.messagesToShow = [];
       this.floatingMessage = null;
       this.connection.close();
       let cid = this.dlgty_chb_guidGenerator();
@@ -214,8 +226,8 @@ export default {
           }
           const _this = this;
           setTimeout(() => {
-            _this.messagesToShow.push(newMessage);
             _this.adding = false;
+            _this.messagesToShow.push(newMessage);
             _this.scrollToTheEnd();
           }, waitTime);
         }
@@ -331,7 +343,7 @@ export default {
     bottom: 0;
 
     .input-box {
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 1rem;
       background: #ffffff;
       border: 2px solid #000000;
@@ -351,15 +363,15 @@ export default {
         }
         .option {
           display: inline-block;
-          margin-right: 1rem;
-          margin-top: 1rem;
+          margin-right: 0.8rem;
+          margin-top: 0.8rem;
           border-radius: 0.5rem;
           overflow: hidden;
           .option-body {
             background: lightblue;
-            font-size: 1.5rem;
-            line-height: 1.2em;
-            padding: 1rem;
+            font-size: 1rem;
+            line-height: 1em;
+            padding: 0.8rem;
             cursor: pointer;
           }
         }
@@ -369,7 +381,49 @@ export default {
       }
     }
   }
+/*--------------------
+Typing indicator
+--------------------*/
+.tiblock {
+  align-items: center;
+  display: flex;
+  height: 17px;
+}
 
+.ticontainer .tidot {
+  background-color: #90949c;
+}
+
+.tidot {
+  -webkit-animation: mercuryTypingAnimation 1.5s infinite ease-in-out;
+  border-radius: 2px;
+  display: inline-block;
+  height: 4px;
+  margin-right: 2px;
+  width: 4px;
+}
+
+@-webkit-keyframes mercuryTypingAnimation{
+  0%{
+    -webkit-transform:translateY(0px)
+  }
+  28%{
+    -webkit-transform:translateY(-5px)
+  }
+  44%{
+    -webkit-transform:translateY(0px)
+  }
+}
+
+.tidot:nth-child(1){
+  -webkit-animation-delay:200ms;
+}
+.tidot:nth-child(2){
+  -webkit-animation-delay:300ms;
+}
+.tidot:nth-child(3){
+  -webkit-animation-delay:400ms;
+}
 
 /*--------------------
 Messages

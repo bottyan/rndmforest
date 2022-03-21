@@ -48,10 +48,10 @@
       <div class="content-parent">
         <div class="block max-width">
           <div class="l-image">
-            <img src="~/assets/images/ai_sa/example.png"/>
+            <img src="~/assets/images/ai_sa/example2.png"/>
           </div>
           <div class="r-text">
-            <div class="block-subtitle">Help understanding by</div>
+            <div class="block-subtitle">Higher engagement through</div>
             <div class="block-title">Conversational experience</div>
             <div class="block-content">
               <div class="p">AI automatically finds the best content for the customers from the companies knowledge base.</div>
@@ -66,7 +66,7 @@
       <div class="content-parent">
         <div class="block max-width">
           <div class="l-image">
-            <img src="~/assets/images/robot-head-r.png"/>
+            <img src="~/assets/images/ai_sa/robot2.png"/>
           </div>
           <div class="r-text">
             <div class="block-subtitle">From a passive receiver</div>
@@ -142,7 +142,12 @@ export default {
       const mid = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section3', start:'top bottom', end:'bottom top', scrub: true}});
       mid
         .to(bg, { duration: 1, background: 'rgba(0,88,155,0.2)', ease: "none" })
-        .to(bg, { duration: 1, background: 'rgba(255,255,255,0)', ease: "none" });
+        //.to(bg, { duration: 1, background: 'rgba(255,255,255,0)', ease: "none" });
+
+      const mid2 = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.section4', start:'top bottom', end:'top top', scrub: true}});
+      mid2
+        .to(bg, { duration: 1, background: 'rgba(207,92,120,0.1)', ease: "none" })
+        //.to(bg, { duration: 1, background: 'rgba(255,255,255,0)', ease: "none" });
 
 
       const tlf = this.$gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'.footer', start:'top bottom', end:'bottom bottom', scrub: true}});
