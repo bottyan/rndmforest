@@ -161,6 +161,15 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="subscribe-holder">
+        <div class="subscribe">
+          <div class="subscribe-body">
+            <a href="https://app.dialogity.com/registration">Start free trial</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </template>
@@ -584,6 +593,52 @@ export default {
           margin-block-start: 0.3em;
           margin-block-end: 0.3em;
           font-size: 1em;
+        }
+      }
+    }
+  }
+
+  .row {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+  }
+  .subscribe-holder {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+
+    .subscribe {
+      display: inline-block;
+      margin-right: 0.8rem;
+      margin-top: 0.8rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 2px solid black;
+      box-shadow: .5rem .5rem 2px 0px rgba(0,0,0,0.62);
+      background: black;
+
+      .subscribe-body {
+        background: black;
+        a {
+          font-size: 2rem;
+          line-height: 2em;
+          padding: 1.5rem;
+          cursor: pointer;
+          background: black;
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+    .subscribe:hover {
+      box-shadow: 1rem 1rem 2px 0px rgba(0,0,0,0.62);
+      background: lightblue;
+      .subscribe-body {
+        background: lightblue;
+        a {
+          background: lightblue;
+          color: black;
         }
       }
     }

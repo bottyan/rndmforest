@@ -7,7 +7,7 @@
           <div class="link-holder">
             <!--div class="nav-item"><NuxtLink to="/">Home</NuxtLink></div-->
             <div class="nav-item" @mouseover="mouseOver"><NuxtLink to="/">Products</NuxtLink></div>
-            <div class="nav-item"><NuxtLink to="/pricing">Pricing</NuxtLink></div>
+            <div class="nav-item" @click="menuClick"><NuxtLink to="/pricing">Pricing</NuxtLink></div>
             <!--div class="nav-item"><NuxtLink to="/ai_sales_assistant">AI Sales Assistant</NuxtLink></div-->
           </div>
         </div>
@@ -34,9 +34,9 @@
         <div class="product-panel">
           <div class="menu-block">
             <h2>Features</h2>
-            <div class="panel-item"><NuxtLink to="/live_chat" >Live chat</NuxtLink></div>
-            <div class="panel-item"><NuxtLink to="/chat_automation">Chatbots</NuxtLink></div>
-            <div class="panel-item"><NuxtLink to="/ai_sales_assistant">AI sales assistant</NuxtLink></div>
+            <div class="panel-item" @click="menuClick"><NuxtLink to="/live_chat" >Live chat</NuxtLink></div>
+            <div class="panel-item" @click="menuClick"><NuxtLink to="/chat_automation">Chatbots</NuxtLink></div>
+            <div class="panel-item" @click="menuClick"><NuxtLink to="/ai_sales_assistant">AI sales assistant</NuxtLink></div>
           </div>
           <!--div class="menu-block">
             <h2>Documentation</h2>
@@ -59,14 +59,14 @@
         <div class="col col1"></div>
         <div class="col col2">
           <div class="footer-block">
-            <div class="footer-item"><NuxtLink to="/pricing" v-on:click="menuClick()">Pricing</NuxtLink></div>
-            <div class="footer-item"><NuxtLink to="/terms_of_service">Terms of Service</NuxtLink></div>
-            <div class="footer-item"><NuxtLink to="/privacy_policy">Privacy Policy</NuxtLink></div>
+            <div class="footer-item" @click="menuClick"><NuxtLink to="/pricing">Pricing</NuxtLink></div>
+            <div class="footer-item" @click="menuClick"><NuxtLink to="/terms_of_service">Terms of Service</NuxtLink></div>
+            <div class="footer-item" @click="menuClick"><NuxtLink to="/privacy_policy">Privacy Policy</NuxtLink></div>
           </div>
           <div class="footer-block">
-            <div class="footer-item"><NuxtLink to="/live_chat">Live chat</NuxtLink></div>
-            <div class="footer-item"><NuxtLink to="/chat_automation">Chatbots</NuxtLink></div>
-            <div class="footer-item"><NuxtLink to="/ai_sales_assistant">AI sales assistant</NuxtLink></div>
+            <div class="footer-item" @click="menuClick"><NuxtLink to="/live_chat">Live chat</NuxtLink></div>
+            <div class="footer-item" @click="menuClick"><NuxtLink to="/chat_automation">Chatbots</NuxtLink></div>
+            <div class="footer-item" @click="menuClick"><NuxtLink to="/ai_sales_assistant">AI sales assistant</NuxtLink></div>
           </div>
         </div>
         <div class="col col3">
@@ -299,8 +299,10 @@
 export default {
   methods: {
 
-    menuClick: function() {
-      console.log("CLICK");
+    menuClick: function(event) {
+      //console.log("CLICK");
+      const navPanel = document.querySelector(".navpanel");
+      navPanel.classList.remove("active");
     },
 
     toggleMenu: function () {
