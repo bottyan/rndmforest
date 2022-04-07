@@ -18,7 +18,7 @@
           <div class="pricingPlans__planCard">
             <div class="margin--vertical-c4" >
               <div class="pricingGrid__rowItem">
-                <a href="/pricing/premium-details/">
+                <a href="#">
                   <h2 class="h5 pricingPlans__header ">Live Chat</h2>
                   <p class="copy margin--top-c4">
                     Communicate with your customers for FREE.
@@ -95,7 +95,7 @@
                     <div class="pricingPlans__planCard">
             <div class="margin--vertical-c4" >
               <div class="pricingGrid__rowItem">
-                <a href="/pricing/premium-details/">
+                <a href="#">
                   <h2 class="h5 pricingPlans__header ">Chatbots</h2>
                   <p class="copy margin--top-c4">
                     Decrease response time and increase conversion rate by automation.
@@ -172,7 +172,7 @@
         <div class="pricingPlans__planCard">
             <div class="margin--vertical-c4" >
               <div class="pricingGrid__rowItem">
-                <a href="/pricing/premium-details/">
+                <a href="#">
                   <h2 class="h5 pricingPlans__header ">AI Sales Assistant</h2>
                   <p class="copy margin--top-c4">
                     Extend your team with AI
