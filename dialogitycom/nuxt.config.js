@@ -46,6 +46,7 @@ export default {
   buildModules: [
     'nuxt-gsap-module',
     '@nuxtjs/device',
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -62,5 +63,9 @@ export default {
       scrollTo: true,
       scrollTrigger: true,
     }
-  }
+  },
+
+  googleAnalytics: {
+    id: 'UA-155074630-1'
+  },
 }

@@ -44,20 +44,22 @@
     <div id="inputHolder" class="input-holder sticky" ref="inputHolder">
       <div class="max-width">
         <div class="input-box">
-          <div v-if="floatingMessage">
-            <div class='choice-form' v-if="floatingMessage['body']['type']=='form'">
-              <div class='option-title'>{{floatingMessage['body']['text']}}</div>
-              <input id="freeTextInput" type="text" v-on:keyup.enter="onEnterAnswer" autocomplete="off"/>
-            </div>
-            <div class='choice-form' v-if="floatingMessage['body']['type']=='choice'">
-              <div class='option-title'>Select an option 👇</div>
-              <div class='option' v-for="option in floatingMessage['body']['options']" :key="option.id">
-                <div class='option-body' @click="clickOption(floatingMessage.id, option.id)">{{option.text}}</div>
+          <div v-if="!adding">
+            <div v-if="floatingMessage">
+              <div class='choice-form' v-if="floatingMessage['body']['type']=='form'">
+                <div class='option-title'>{{floatingMessage['body']['text']}}</div>
+                <input id="freeTextInput" type="text" v-on:keyup.enter="onEnterAnswer" autocomplete="off"/>
+              </div>
+              <div class='choice-form' v-if="floatingMessage['body']['type']=='choice'">
+                <div class='option-title'>Select an option 👇</div>
+                <div class='option' v-for="option in floatingMessage['body']['options']" :key="option.id">
+                  <div class='option-body' @click="clickOption(floatingMessage.id, option.id)">{{option.text}}</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div v-if="!floatingMessage || (floatingMessage['body']['type'] !== 'choice' && floatingMessage['body']['type'] !== 'form')">
-            <input id="freeTextInput" type="text" v-on:keyup.enter="onEnter" autocomplete="off"/>
+            <div v-if="!floatingMessage || (floatingMessage['body']['type'] !== 'choice' && floatingMessage['body']['type'] !== 'form')">
+              <input id="freeTextInput" type="text" v-on:keyup.enter="onEnter" autocomplete="off"/>
+            </div>
           </div>
         </div>
       </div>

@@ -44,7 +44,7 @@
             <div class="panel-item"><a href="https://doc.dialogity.com/">Documentation</a></div>
           </div-->
           <div class="menu-block mobile-menu-block">
-            <h2><NuxtLink to="/pricing" >Pricing</NuxtLink></h2>
+            <h2 @click="menuClick"><NuxtLink to="/pricing" >Pricing</NuxtLink></h2>
             <div class="buttons">
               <div class="button"><a href="https://app.dialogity.com/login">Log In</a></div>
               <div class="button"><a href="https://app.dialogity.com/registration">Sign Up Free</a></div>
