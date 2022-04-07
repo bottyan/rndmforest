@@ -30,7 +30,7 @@
       <div class="content-parent">
         <div class="block max-width">
           <div class="l-image">
-            <img src="~/assets/images/ai_sa/differentiate.png"/>
+            <img src="~/assets/images/ai_sa/same.png"/>
           </div>
           <div class="r-text">
             <div class="block-subtitle">Marketer's new challenge</div>

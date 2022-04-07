@@ -66,9 +66,9 @@
     <div class="footer">
     </div>
 
-    <div v-on:click="reset()">
+    <!--div v-on:click="reset()">
       Reset
-    </div>
+    </div-->
 
   </div>
 </template>
