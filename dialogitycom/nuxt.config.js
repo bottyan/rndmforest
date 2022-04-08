@@ -2,8 +2,8 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   router: {
-    //base: '/dnuxt/',
-    base: '/',
+    base: '/dnuxt/',
+    //base: '/',
     extendRoutes(routes, resolve) {
       routes.push({
         name: 'hu main',
