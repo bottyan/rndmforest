@@ -2,13 +2,40 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   router: {
-    base: '/dnuxt/'
-    //base: '/'
+    //base: '/dnuxt/',
+    base: '/',
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'hu main',
+        path: '/hu',
+        component: resolve(__dirname, 'pages/index.vue')
+      });
+      routes.push({
+        name: 'hu pricing',
+        path: '/hu/pricing',
+        component: resolve(__dirname, 'pages/pricing.vue')
+      });
+      routes.push({
+        name: 'hu privacy policy',
+        path: '/hu/privacy-policy',
+        component: resolve(__dirname, 'pages/privacy_policy.vue')
+      });
+      routes.push({
+        name: 'old privacy policy',
+        path: '/privacy-policy',
+        component: resolve(__dirname, 'pages/privacy_policy.vue')
+      });
+      routes.push({
+        name: 'non existing wordpredd plugin page',
+        path: '/wordpress-plugin',
+        component: resolve(__dirname, 'pages/index.vue')
+      });
+    }
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'dialogitycom',
+    title: 'Dialogity Chat',
     htmlAttrs: {
       lang: 'en'
     },
@@ -19,7 +46,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' }
     ],
     link: [
       {
@@ -69,4 +96,6 @@ export default {
   googleAnalytics: {
     id: 'UA-155074630-1'
   },
+
+
 }
