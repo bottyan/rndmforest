@@ -44,7 +44,7 @@
     <div id="inputHolder" class="input-holder sticky" ref="inputHolder">
       <div class="max-width">
         <div class="input-box">
-          <div v-if="!adding">
+          <div class="input-anim" v-if="(messages.length == messagesToShow.length)">
             <div v-if="floatingMessage">
               <div class='choice-form' v-if="floatingMessage['body']['type']=='form'">
                 <div class='option-title'>{{floatingMessage['body']['text']}}</div>
@@ -524,7 +524,7 @@ Messages
       transform-origin: 0 0;
       animation: bounce 500ms linear both;
     }
-    
+
     // &.loading {
 
     //   &::before {
@@ -553,6 +553,20 @@ Messages
     //   }
     // }
     
+  }
+}
+.input-anim {
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
   }
 }
 </style>
