@@ -24,13 +24,13 @@ jobs:
         run: cd .
 
       - name: Install dependencies
-        run: cd ./dialogitycom; yarn
+        run: cd ./rndmforesteu; yarn
 
       - name: Generate
-        run: cd ./dialogitycom; yarn run generate
+        run: cd ./rndmforesteu; yarn run generate
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dialogitycom/dist
+          publish_dir: ./rndmforesteu/dist
