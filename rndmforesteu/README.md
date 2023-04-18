@@ -3,6 +3,8 @@
 ## Build Setup
 
 ```bash
+$ export NODE_OPTIONS=--openssl-legacy-provider
+
 # install dependencies
 $ yarn install
 
