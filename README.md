@@ -1,2 +1,2 @@
 # dnuxt
-Nuxt.js website
+Nuxt.js website for Random Forest Kft.
