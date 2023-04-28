@@ -8,12 +8,12 @@
           <div class="above-title"></div>
           <div class="title font-XXL">
             <h1>
-              <div>MEANINGFUL CONVERSATION
+              <div>Random Forest
               </div>
             </h1>
           </div>
           <div class="below-title font-XL">
-            <h2>with your customers</h2>
+            <h2>Collection of initiatives in design, AI and robotics.</h2>
           </div>
         </div>
       </div>
