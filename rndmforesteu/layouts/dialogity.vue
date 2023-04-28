@@ -4,12 +4,12 @@
       <div class="navbar">
         
         <div class="menu">
-          <div class="link-holder">
-            <!--div class="nav-item"><NuxtLink to="/">Home</NuxtLink></div-->
+          <!--div class="link-holder">
+            
             <div class="nav-item" @mouseover="mouseOver"><NuxtLink to="/">Products</NuxtLink></div>
             <div class="nav-item" @click="menuClick"><NuxtLink to="/pricing">Pricing</NuxtLink></div>
-            <!--div class="nav-item"><NuxtLink to="/ai_sales_assistant">AI Sales Assistant</NuxtLink></div-->
-          </div>
+            
+          </div-->
         </div>
 
         <div class="logo">
@@ -19,18 +19,22 @@
         </div>
 
         <div class="buttons">
+          <!--
           <div class="button"><a href="https://app.dialogity.com/login">Log In</a></div>
           <div class="button"><a href="https://app.dialogity.com/registration">Sign Up Free</a></div>
+          -->
         </div>
 
 
         <div class="hamburger" v-on:click="toggleMenu()">
+          <!--
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
+          -->
         </div>
       </div>
-      <div class="navpanel" @mouseleave="mouseLeave">
+      <!--div class="navpanel" @mouseleave="mouseLeave">
         <div class="product-panel">
           <div class="menu-block">
             <h2>Features</h2>
@@ -38,11 +42,7 @@
             <div class="panel-item" @click="menuClick"><NuxtLink to="/chat_automation">Chatbots</NuxtLink></div>
             <div class="panel-item" @click="menuClick"><NuxtLink to="/ai_sales_assistant">AI sales assistant</NuxtLink></div>
           </div>
-          <!--div class="menu-block">
-            <h2>Documentation</h2>
-            <div class="panel-item"><NuxtLink to="/live_chat" >Integrations</NuxtLink></div>
-            <div class="panel-item"><a href="https://doc.dialogity.com/">Documentation</a></div>
-          </div-->
+          
           <div class="menu-block mobile-menu-block">
             <h2 @click="menuClick"><NuxtLink to="/pricing" >Pricing</NuxtLink></h2>
             <div class="buttons">
@@ -51,7 +51,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div-->
     </div>
     <Nuxt />
     <div class="footer">
