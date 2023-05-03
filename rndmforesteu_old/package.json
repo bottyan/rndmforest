@@ -1,0 +1,29 @@
+{
+  "name": "rndmforest",
+  "version": "1.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt --hostname 0.0.0.0",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "@nuxt/content": "^2.6.0",
+    "core-js": "^3.15.1",
+    "js-cookie": "^3.0.1",
+    "nuxt": "^3.0.0",
+    "scrollmagic-plugin-gsap": "^1.0.4"
+  },
+  "devDependencies": {
+    "@nuxtjs/device": "^2.1.0",
+    "@nuxtjs/google-analytics": "^2.4.0",
+    "nuxt-gsap-module": "^1.5.0",
+    "push-dir": "^0.4.1",
+    "sass": "^1.43.3",
+    "sass-loader": "^10.1.1",
+    "scrollmagic": "^2.0.8",
+    "webpack": "^4.46.0"
+  }
+}
