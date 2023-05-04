@@ -1,1 +1,0 @@
-import{k as o,l as a,R as s,z as r,o as l}from"./entry.5ec4bbe1.js";const u={async asyncData({$content:t,params:e}){return{article:await t("articles",e.slug).fetch()}}};function _(t,e,n,i,p,m){const c=r("nuxt-content");return l(),a("article",null,[s(c,{document:t.article},null,8,["document"])])}const f=o(u,[["render",_]]);export{f as default};
