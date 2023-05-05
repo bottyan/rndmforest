@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+// TODO: check modules https://nuxt.com/modules?category=Extensions
 export default defineNuxtConfig({
     modules: [
         '@nuxt/content',
@@ -28,5 +29,8 @@ export default defineNuxtConfig({
                 ital: [100]
             },
         }
-    }
+    },
+    css: [
+        '~/assets/css/default.scss'
+    ]
 })
