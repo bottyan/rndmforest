@@ -1,15 +1,11 @@
 <script setup>
-  const catsQuery = queryContent('/pub/')
-  /*
-  // If you'd prefer to pass along raw `QueryBuilderParams`:
-  const catsQuery = {
-    where: [
-      { _path: /^\/cats/ },
-    ],
-  }
-  */
-  // TODO: document driven example: https://dev.to/ceceliacreates/document-driven-mode-in-nuxt-content-v2-42em
-  // TODO: fix navigation
+
+  const { data: navigation } = await useAsyncData('navigation', () => {
+    return fetchContentNavigation()
+  })
+
+  // TODO: Design example
+ 
 </script>
 
 <template>
@@ -21,13 +17,9 @@
         </div>
       </ContentList>
       NAVIGATION
-      <ContentNavigation v-slot="{ navigation }" :query="catsQuery">
-        <ul>
-          <li v-for="link of navigation" :key="link._path">
-            <NuxtLink :to="link._path">{{ link.title }}</NuxtLink>
-          </li>
-        </ul>
-      </ContentNavigation>
+      <nav>
+        <AppNavigation :navigation-tree="navigation" />
+      </nav>
       REST
       <ContentDoc />
     </main>

@@ -11,7 +11,7 @@ A [rich text](/) will be **rendered** by the component.
 
 # Hello Content
 
-::hero
+::hero{image="/img/bcp.png"}
 Default slot text
 
 #description
@@ -25,4 +25,4 @@ This is the more detailed section.
 The content of the card
 ::
 
-![my image](/img/smart.webp)
+<!-- ![my image](/img/smart.webp) -->

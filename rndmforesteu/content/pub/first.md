@@ -1,3 +1,8 @@
-# My first blog post
+::hero{image="/img/bcp.png"}
+This is the main title
 
-Welcome to my first blog post using content module
+Normal text
+
+
+::paragraph
+This is a longer text, which is a paragraph.

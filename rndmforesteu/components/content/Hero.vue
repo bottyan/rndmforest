@@ -1,6 +1,16 @@
+<script setup>
+  defineProps({
+    image: {
+      type: String,
+      default: '/img/smart.webp'
+    }
+  })
+</script>
+
 <template>
-    <section>
+    <section v-bind:style="{ backgroundImage: 'url(' + image + ')' }">
       <h1 class="text-4xl"><slot /></h1>
-      <slot name="description" />
+      <!--slot name="description" /-->
     </section>
 </template>
+
