@@ -17,7 +17,8 @@ And the firs letter should be bigger, but I don't see it, why?
 :::
 
 :::block
-This is an other something in an other block so the texts should be separated with an empty space.
+This is an other *something* in an other block so the texts should be separated with an empty space.
+[link](https://google.com)
 :::
 ::
 
