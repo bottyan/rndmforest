@@ -25,10 +25,7 @@ export default defineNuxtConfig({
             'Open Sans': true,
             Anton: true,
             Lato: [100, 300],
-            Raleway: {
-                wght: [100, 400],
-                ital: [100]
-            },
+            Raleway: true,
         }
     },
     css: [

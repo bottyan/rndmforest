@@ -7,6 +7,6 @@
 <style scoped>
 .highlight {
     font-family: Merriweather;
-    font-weight: 500;
+    font-weight: 700;
 }
 </style>
