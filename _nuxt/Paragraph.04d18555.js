@@ -1,1 +1,0 @@
-import{a,o as r,b as c,r as s}from"./entry.be07e068.js";const t={},_={class:"paragraph"};function o(e,n){return r(),c("div",_,[s(e.$slots,"default",{},void 0,!0)])}const p=a(t,[["render",o],["__scopeId","data-v-fc9c8777"]]);export{p as default};

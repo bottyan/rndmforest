@@ -1,1 +1,0 @@
-import{o as a,b as s,e as r,r as o,f as l}from"./entry.be07e068.js";const n={class:"text-4xl"},i={__name:"Hero",props:{image:{type:String,default:"/img/smart.webp"}},setup(e){return(t,c)=>(a(),s("section",{style:l({backgroundImage:"url("+e.image+")"})},[r("h1",n,[o(t.$slots,"default")])],4))}};export{i as default};

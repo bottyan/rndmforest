@@ -1,1 +1,0 @@
-import o from"./ContentSlot.30e5b90a.js";import{a as s,o as n,b as c,h as a}from"./entry.be07e068.js";const r={},_={class:"text-4xl"};function l(e,f){const t=o;return n(),c("h1",_,[a(t,{use:e.$slots.default,unwrap:"p"},null,8,["use"])])}const u=s(r,[["render",l]]);export{u as default};
