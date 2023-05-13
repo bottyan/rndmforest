@@ -1,28 +1,27 @@
 ---
-title: 'Title of the page'
-description: 'meta description of the page'
+title: 'Random Forest'
+description: ''
 ---
 
-::the-title
-A [rich text](/) will be **rendered** by the component.
-::
+::cards
 
-<!-- Content of the page -->
-
-# Hello Content
-
-::hero{image="/img/bcp.png"}
-Default slot text
-
+:::card
+Dialogity
 #description
 This will be rendered inside the `description` slot.
+:::
+
+:::card
+CNC Furnitures
+#description
+This will be rendered inside the `description` slot.
+:::
+
+:::card
+Robotics
+#description
+This will be rendered inside the `description` slot.
+:::
+
 ::
 
-<!--more-->
-This is the more detailed section.
-
-::card
-The content of the card
-::
-
-<!-- ![my image](/img/smart.webp) -->

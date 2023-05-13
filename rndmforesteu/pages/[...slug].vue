@@ -10,7 +10,7 @@
 
 <template>
     <main>
-      LIST
+      <!--LIST
       <ContentList path="/pub" v-slot="{ list }">
         <div v-for="article in list" :key="article._path">
           <h2>{{ article.title }}</h2>
@@ -21,6 +21,7 @@
         <AppNavigation :navigation-tree="navigation" />
       </nav>
       REST
+      -->
       <ContentDoc />
     </main>
 </template>
