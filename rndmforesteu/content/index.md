@@ -14,7 +14,7 @@ This is a collection of projects I'm interested in. The site was created to docu
 :::card
 Dialogity
 #description
-This will be rendered inside the `description` slot.
+Dialogity is a chat application for websites. It can be easily integrated into any websites so you can communicate with your visitors. The basic package is free of charge. [Check out our website](https://dialogity.com).
 :::
 
 :::card
