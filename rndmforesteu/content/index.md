@@ -29,5 +29,11 @@ Robotics
 This will be rendered inside the `description` slot.
 :::
 
+:::card
+Software development
+#description
+Blog and tutorials about software development.
+:::
+
 ::
 
