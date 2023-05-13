@@ -1,0 +1,1 @@
+import{a as s,o as a,b as t,r as _}from"./entry.3b2d0c50.js";const c={},o={class:"cards"};function r(e,n){return a(),t("div",o,[_(e.$slots,"default",{},void 0,!0)])}const f=s(c,[["render",r],["__scopeId","data-v-76f6caab"]]);export{f as default};
