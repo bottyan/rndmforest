@@ -1,0 +1,1 @@
+import{a as d,o,b as s,r}from"./entry.ee9b9354.js";const t={},a={class:"card p-6 border bg-white dark:bg-black dark:border-gray-700 rounded"};function c(e,n){return o(),s("div",a,[r(e.$slots,"default",{},void 0,!0),r(e.$slots,"description",{},void 0,!0)])}const l=d(t,[["render",c],["__scopeId","data-v-cbc3efd6"]]);export{l as default};
