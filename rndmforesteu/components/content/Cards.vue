@@ -1,18 +1,11 @@
 <template>
-    <div class="cards">
+    <div class="cards grid grid-flow-row-dense sm:grid-cols-1 lg:grid-cols-2 gap-6">
         <slot />
     </div>
 </template>
 
 <style scoped>
 .cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: normal;
-    align-content: normal;
-    gap: 1rem;
     padding: 1rem;
 
     margin-left: auto;
