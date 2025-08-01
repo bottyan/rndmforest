@@ -1,7 +1,10 @@
 <script setup lang="ts">
 const route = useRoute()
 const config = useRuntimeConfig()
-const path = route.path.replace(new RegExp(`^${config.app.baseURL}`), '') || '/index'
+// Remove baseURL prefix and normalise root path
+const base = config.app.baseURL.replace(/\/$/, '')
+const cleanedPath = route.path.replace(new RegExp(`^${base}\/`), '')
+const path = (!cleanedPath || cleanedPath === '/') ? '/index' : cleanedPath
 
 const { data: navigation } = await useAsyncData('navigation', () => {
   return fetchContentNavigation()
