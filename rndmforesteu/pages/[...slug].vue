@@ -1,11 +1,14 @@
-<script setup>
+<script setup lang="ts">
+const route = useRoute()
+const config = useRuntimeConfig()
+const path = route.path.replace(new RegExp(`^${config.app.baseURL}`), '') || '/index'
 
-  const { data: navigation } = await useAsyncData('navigation', () => {
-    return fetchContentNavigation()
-  })
+const { data: navigation } = await useAsyncData('navigation', () => {
+  return fetchContentNavigation()
+})
 
-  // TODO: Design example
- 
+// TODO: Design example
+
 </script>
 
 <template>
@@ -22,7 +25,7 @@
       </nav>
       REST
       -->
-      <ContentDoc />
+      <ContentDoc :path="path" />
     </main>
 </template>
 
