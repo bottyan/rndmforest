@@ -5,6 +5,7 @@ const config = useRuntimeConfig()
 const base = config.app.baseURL.replace(/\/$/, '')
 const cleanedPath = route.path.replace(new RegExp(`^${base}\/`), '')
 const path = (!cleanedPath || cleanedPath === '/') ? '/index' : cleanedPath
+console.log('Looking for content at', path)
 
 const { data: navigation } = await useAsyncData('navigation', () => {
   return fetchContentNavigation()
