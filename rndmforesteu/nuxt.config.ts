@@ -14,6 +14,9 @@ export default defineNuxtConfig({
     nitro: {
         preset: 'service-worker'
     },
+    app: {
+        baseURL: '/rndmforest/'
+    },
     googleFonts: {
         families: {
             // https://themeisle.com/blog/best-google-fonts/#gref
