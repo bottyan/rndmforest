@@ -36,7 +36,7 @@ const { data: navigation } = await useAsyncData('navigation', () => {
       </nav>
       REST
       -->
-      <ContentDoc :path="path" />
+      <ContentDoc/>
     </main>
 </template>
 
