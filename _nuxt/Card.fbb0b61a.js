@@ -1,0 +1,1 @@
+import{a as t,o,b as d,e as n,r as s}from"./entry.1bd1436e.js";const a={},c={class:"card col-span-1 flex flex-col justify-end"},r={class:"text-lg font-bold"};function _(e,l){return o(),d("div",c,[n("div",r,[s(e.$slots,"default",{},void 0,!0)]),s(e.$slots,"description",{},void 0,!0)])}const i=t(a,[["render",_],["__scopeId","data-v-292f4bb3"]]);export{i as default};
