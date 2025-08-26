@@ -1,0 +1,1 @@
+import{a as t,o as s,b as _,r as a}from"./entry.f9b46073.js";const c={},o={class:"paragraph highlight"};function n(e,r){return s(),_("div",o,[a(e.$slots,"default",{},void 0,!0)])}const i=t(c,[["render",n],["__scopeId","data-v-3c69f013"]]);export{i as default};
